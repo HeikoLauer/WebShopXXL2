@@ -1,1 +1,5 @@
 https://github.com/HeikoLauer/WebShopXXL2.git
+
+Für den Content Assist EL Expression
+Configure->Add JSF Capabilities
+Install JBoss Tools
