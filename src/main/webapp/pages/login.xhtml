@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"	
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+ 
+    
+    <h:form id="form_loginpage">
+  			
+		<!-- START PANEL 2 -->
+		<div class="common_loginpanel_main common_label">
+				
+			<div class="cus_loginpanel_header common_loginpanel_header">
+				<p:outputLabel value=" Bitte melden Sie sich an " />
+			</div>
+			
+			<!--  START LOGIN MASK -->		
+			<div class="common_loginpanel_inputpanel">
+		
+		    	<div class="common_loginpanel_inputgroup">
+	                              
+	               <p:graphicImage styleClass="common_loginpanel_inputicon" 
+	               		value="/resources/images/common/login_user.png"/>
+	                           
+	        	   <p:inputText id="id_loginpage_loginname_input"
+							onchange="js_common_check_login()"
+							onblur="js_common_check_login()"
+							onkeypress="js_common_check_login()"
+							value="#{loginBean.loginName}" size="30" />
+	            </div>
+	                            
+	            <div class="common_loginpanel_inputgroup">
+	             	
+	             	<p:graphicImage styleClass="common_loginpanel_inputicon" 
+	               		value="/resources/images/common/login_password.png"/>
+	               
+					<p:password id="id_loginpage_password_input" 
+							onchange="js_common_check_login()"
+							onkeypress="js_common_check_login()"
+							onblur="js_common_check_login()"
+							value="#{loginBean.password}" size="30" />
+	           	</div>
+				
+				<p:commandButton style="margin: 5px 0px 5px 10px;" 
+					ajax="false"
+					id="id_loginpage_button_login"
+					value="Anmelden" 
+					action="#{loginBean.login}">
+				</p:commandButton>
+					    				
+			</div> <!--  END LOGIN MASK -->
+		
+		</div> <!-- END MAIN -->
+		
+    </h:form>
+
+</html>
