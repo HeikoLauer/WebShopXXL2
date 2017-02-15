@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+	<h:head>
+	
+		<title>WebShop XXL2 ${VAR_CUSTOM_NAME}</title>
+		
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/common.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/menu.css" rel="stylesheet" type="text/css" />
+		
+		<link href="../resources/css/mm.css" rel="stylesheet" type="text/css" />
+		 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	    <script type="text/javascript" src="../resources/js/common.js?2017021401" />
+		<script type="text/javascript" src="../resources/js/mm.js?2017021401" />
+		
+	</h:head>
+	
+	
+	<h:body onload="js_init()">
+			
+		<div id="id_header_start" class="common_headerpanel_main cus_headerpanel_main">	
+			<ui:include src="../template/header.xhtml" />
+		</div>
+		 
+		<div id="id_error_start" class="common_errorpanel_main">
+			<ui:include src="../template/error.xhtml" />
+		</div>
+		
+		<div id="id_content_start" class="common_contentpanel_main">
+			<ui:include src="#{navigationBean.content_page}" />
+		</div>
+		
+		
+	</h:body>
+	
+</html>

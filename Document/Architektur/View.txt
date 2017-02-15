@@ -1,0 +1,103 @@
+--------------------------------------------------------------------------------------
+Start der Abwendung und neuer Kunde 
+--------------------------------------------------------------------------------------
+
+	Die Seiten beginnen mit einer für den Kunden speziellen XHTML Seite.
+	Diese Seiten liegen unter webapp-> Login
+	Das einzige was diese Seite macht, ist, den Titel und Kundenspezifische Variablen in die Session zu legen
+	und dann die main.xhtml zu includieren.
+	
+	Unten ist ein Template für diese Seite.
+	
+	Für jeden neuen Kunden unter webapps-> login einen XHTML Seite anlegen.
+	->  KUNDEN.xhtml
+	
+	Dann das unten stehende Template einfügen.
+	Oder, einen bestehende Login Seite kopieren.
+	
+	Der Value $$PATH_OF_CUSTOM$$ muss mit dem Path des Kunden in der Variablen VAR_CUSTOM_PATHNAME, mm, mobilcom etc, ersetzt werden
+	Der Value $$TITLE_OF_CUSTOM$$ muss mit dem Namen des Kunden in der Variablen VAR_CUSTOM_NAME ersetzt werden.
+	
+	Wenn es nötig ist, werden hier neue Variablen angelegt.
+	Das Schema ist : VAR_CUSTOM_NAMEOFVAR
+	Die Syntax ist : <c:set var="VAR_CUSTOM_NAMEOFVAR" scope="session" value="$$VALUE_OF_VAR$$"/>
+	 
+	Sonst gibt es keine Kundenspezifische Dinge zu tun.
+	 
+		<?xml version="1.0" encoding="UTF-8"?>
+		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		
+		<html xmlns="http://www.w3.org/1999/xhtml"
+			xmlns:f="http://java.sun.com/jsf/core"
+			xmlns:c="http://java.sun.com/jsp/jstl/core"	
+			xmlns:ui="http://java.sun.com/jsf/facelets"	
+			xmlns:h="http://java.sun.com/jsf/html">
+			
+			<!--  Here set the value of the Custom Path e.g  mm,  mobilcom -->
+			<c:set var="VAR_CUSTOM_PATHNAME" scope="session" value="$$PATH_OF_CUSTOM$$"/>
+		
+			<!--  Here set the value of the Title e.g  M+M,  Mobilcom -->
+			<c:set var="VAR_CUSTOM_NAME" scope="session" value="$$TITLE_OF_CUSTOM$$"/>
+			
+			<!--  Here include the main Page PLEASE NOT CHANGE THIS -->
+			<ui:include src="../template/main.xhtml" />	 	
+			
+		</html>
+		
+--------------------------------------------------------------------------------------
+main.xhtml 
+--------------------------------------------------------------------------------------
+	
+	Die main.xhtml hat die Aufgabe den <head> zu definieren und die Seitenstrultur fest zu legen.
+	Im Head werden die css und javascript Dateien von Bootstrap und die eigenen CSS und Javascript Dateien eingebunden.
+	Hier müssen nur neue css und javascript dateien eingebunden werden.
+	Wenn immer Kundenspezifische Daten nötig sind die schon beim Start übergeben wurden, weden diese hier über die in der 
+	LOGIN.xhtml angelegten Variablen übernommen. Z.B $VAR_CUSTOM_NAME
+	
+	In der main.xhtml wird im body auch eine Javascript methode gestartet, die die Anwendung vorbereitet.
+	
+	Hier die main.xhtml
+	
+	<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+	<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:ui="http://java.sun.com/jsf/facelets"
+		xmlns:h="http://java.sun.com/jsf/html">
+	
+		<h:head>
+		
+			<title>WebShop XXL2 ${VAR_CUSTOM_NAME}</title>
+			
+			<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+			<link href="../resources/css/common.css" rel="stylesheet" type="text/css" />
+			
+			<link href="../resources/css/mm.css" rel="stylesheet" type="text/css" />
+			 
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+		    <script type="text/javascript" src="../resources/js/common.js?2017021103" />
+			<script type="text/javascript" src="../resources/js/mm.js?2017021103" />
+			
+		</h:head>
+		
+		<h:body onload="js:init()">
+				
+			
+			<ui:include src="../template/header.xhtml" />
+			
+		</h:body>
+		
+	</html>
+	
+--------------------------------------------------------------------------------------
+Sonstige Seiten für den Aufbau 
+--------------------------------------------------------------------------------------
+
+	Die header.xhtml beinhaltet das Menü und das Logo
+	Das Logo wird über die Sessionvariable VAR_CUSTOM_PATHNAME gesetzt.
+	

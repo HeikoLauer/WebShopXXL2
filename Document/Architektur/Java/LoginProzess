@@ -1,0 +1,58 @@
+Der Loginprozess läuft folgendermassen statt
+--------------------------------------------
+
+Die XHTML Seite die den Login Prozess steuert ist die /pages/login.xhtml.
+An dieser hängt die LoginBean.
+Die LoginBean hat die beiden Properties
+
+	private String loginName="";
+	private String password="";
+
+    
+die mittels JSF EL an die login.xhtml gebunden werden.
+
+Die LoginBean erhält vom FacesContext auch folgende Beans übergeben
+
+	protected NavigationBean getNavigationBean() { return (NavigationBean) getBean("navigationBean"); }
+	protected SessionBean getSessionBean() { return (SessionBean) getBean("sessionBean"); }
+	protected UserBean getUserBean() { return (UserBean) getBean("userBean"); }
+	protected MessageBean getMessageBean() { return (MessageBean) getBean("messageBean"); }
+
+Mittels dieser kann die LoginBean Daten aus anderen Beans erhalten oder Daten in andere Beans schreiben.
+
+Die Methode public String login() steuert das Verhalten nach drücken des Anmelde Button in der login.xhtml
+
+		/***
+	 * @author heiko
+	 * 
+	 * <br> Get a UserTO from UserDao
+	 * <br> if UserTO not null, ( user is found )
+	 * <br> transfer this Object to the UserBean
+	 * <br> set the userIsOnline flag to true
+	 * <br> set the new content Page to categorie.xhtml
+	 * <br> set a new Message for a successful Login
+	 * <br> if the UserTO Object is null
+	 * <br> set a error Message 
+	 * 
+	 * @return "#" for the actionCommand Button
+	 */
+	public String login(){
+		
+		UserTO userTO = UserDao.isUserLoginOk(loginName, password);
+		
+		if(userTO != null){
+			getUserBean().setUser(userTO);
+			getSessionBean().setUserIsOnline(true);
+			getNavigationBean().setContent_page("../pages/categorie.xhtml");
+			getMessageBean().setLoginCorrectState(userTO.getFirstName(), userTO.getLastName());
+		} else {
+			getMessageBean().setLoginWrongState();
+		}
+		
+		return "#";
+
+	}
+	
+	
+
+	

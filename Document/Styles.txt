@@ -1,0 +1,6 @@
+MM
+
+Background color: #5C9CCC
+Orange color: #F9B462
+Fontfarbe weiß color: #FCF8F8
+Hover color: #333

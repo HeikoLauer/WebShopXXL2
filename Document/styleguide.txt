@@ -1,0 +1,35 @@
+XHTML:
+-------
+	In den XHTML Seiten werden Variablen gesetzt.
+	Diese haben das folgende Schema:
+	VAR_CUSTOM_NAMEOFVAR  (NAMEOFVAR durch den Namen ersetzen.)
+	Schreibweise Alles Groß als Static und Trennung durch Bindestrich.
+	Setzen mit :
+	
+	<!--  Here set the value of the Custom Path e.g  mm,  mobilcom -->
+	<c:set var="VAR_CUSTOM_PATHNAME" scope="session" value="mm"/>
+ 
+	Immer ein Kommentar auf Englisch
+	Dann mit <c:set  setzen. Immer im Session Scope
+	
+
+CSS:
+-------
+	Die CSS Klassen liegen unter src/main/webapp/resources/css
+	Es gibt ein CSS File ( common.css ) das allgemein gültig ist.
+	Und es gibt jeweils CSS Files pr Kunden in dem die Kundenspezifischen Styles abgelegt werden.
+	Der Name ist CUSTUM.css z.B mm.css  mobilcom.css
+	
+	Die Klassennamen :
+	In der common.css ist der name immer common_CLASSNAME. 
+	Beginnt also immer mit einem common_
+	
+	In dem Kundenspezifischen Dateien beginnen Klassen immer 
+	cus_CLASSNAME also mit einem cus_
+	
+	
+Javascript
+----------
+
+		 
+	

@@ -1,0 +1,75 @@
+
+Package : com.pinhost.app.webshopxxl2
+	
+	Beans :	com.pinhost.app.webshopxxl2.beans
+	
+		CategorieBean       :  Request Scope 
+			Diese hält eine Kategorie mit Namen und Bild und sonstigen Daten
+		
+		CategorieListBean   :  Session Scope 
+			Diese hält alle Kategorien
+			
+		LoginBean 			: RequestBean
+			Diese ist nur während des Login Prozess aktiv 
+			und hält den Login Namen das Password und startet das Prüfen des Logins
+			über die UserDao.
+	
+		MessageBean 		: Session
+			Diese hat die aktuellen Nachrichten, bzw. Fehlermeldungen 
+			und die dazu gehörigen Styles
+			Über Helpermethoden werden diese von den verschiedenen Seiten gesetzt
+			z.B vom Login oder Logoff Prozesses
+					
+		NavigationBean 		: Session
+			Diese hat die aktuellen Seiten und steuert den Abmeldeprozess
+			
+		SessionBean			: Session
+			Diese hält Session spezifische Daten. z.B den Login status
+			Kann wahrscheinlich entfallen
+			Der Loginstatus könnte auch die UserBean halten
+			
+		UserBean			: Session
+			Diese hält alle Userdaten wie Namen Konto usw.
+								 	
+	------------------------------------------------------------------
+		
+	DAO :	com.pinhost.app.webshopxxl2.dao									 	
+	
+		CategorieDao 	:
+			Diese holt von der Datenbank die Kategorien
+			Abhängig von gesetzten Filter übergibt diese eine Liste oder eine 
+			einzelne Kategorie und übergibt diese der CategorieListBean oder der CategorieBean
+			
+		UserDao			:
+			Diese holt von der Datenbank den User
+			
+			
+	------------------------------------------------------------------
+		
+	Dummy :	com.pinhost.app.webshopxxl2.DummyDaten									 	
+ 		
+ 		UserDummy	:
+ 			Erzeugt mehere User.
+ 			Es werden von der UserDao die Anmeldedaten übergeben und dann wird gesucht 
+ 			ob der User vorhanden ist und das Password stimmt
+ 			Dann wird ein UserTO erzeugt und zurückgeben
+ 			
+	------------------------------------------------------------------
+		
+	TO :	com.pinhost.app.webshopxxl2.to
+		
+		UserTO 		:
+			Ein User Transfer Objekt									 	
+ 	
+	------------------------------------------------------------------
+		
+	Util :	com.pinhost.app.webshopxxl2.util
+		
+		MeldungenUtil 	:
+		 	Hält alle Texte und CSS definitionen für die Meldungen.
+		 	Diese werden dann in die MeldungenBean gesetzt
+		
+		Util			:
+			Grundlegende UtilMethoden
+			
+ 	

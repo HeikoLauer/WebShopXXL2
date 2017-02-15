@@ -1,0 +1,15 @@
+
+webapp--->
+	----> login  	: alle startseiten der Kunden
+	----> pages   	: die einzelnen Seiten wie z.B login.xhtml
+	----> resources : css javascript images
+		----> css 		: alle css Dateien
+							Es gibt eine common.css. Diese beinhaltet alles css Klassen 
+							die für alle Kunden gelten.
+							Pro Kunden gibt es eine KUNDEN.css Datei
+		----> images	: Es gibt pro Kunden einen eigenen Images Ordner
+		
+		----> js		: Hier liegen alle Javascript Dateien
+		
+		----> template 	: hier liegen xhtml Dateien die mehrfach verwendet werden.
+			

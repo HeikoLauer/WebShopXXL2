@@ -1,0 +1,51 @@
+menu.display_on{
+	display: block;
+}
+
+menu.display_off{
+	display: none;
+}
+
+menu.topnav {
+    list-style-type: none;
+    margin: 5px 0px 0px 0px;
+    padding: 0;
+    overflow: hidden;
+}
+
+menu.topnav li {
+	float: left;
+}
+
+menu.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    margin: 8px;
+    padding: 6px;
+    text-decoration: none;
+}
+
+menu.topnav li a:hover:not(.active) {
+	background-color: #111;
+}
+
+menu.topnav li a.active {
+	background-color: #3a436a;
+}
+
+menu.topnav li.right {
+	float: right;
+}
+
+.menu_logoff_link{
+	background-image: url('../resources/images/common/logoff.png');
+	width: 30px;
+	height: 30px;
+}
+
+@media screen and (max-width: 600px){
+    menu.topnav li.right, 
+    menu.topnav li {float: none;}
+}
+

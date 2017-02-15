@@ -1,0 +1,9 @@
+Faces ActionListener
+
+	<f:attribute name="newpage_login_ok" value="../pages/categorie.xhtml" />
+	<f:attribute name="newpage_login_wrong" value="../pages/categorie.xhtml" />
+
+	
+		//String login_ok  = (String) event.getComponent().getAttributes().get("newpage_login_ok");
+		//String login_wrong  = (String) event.getComponent().getAttributes().get("newpage_login_wrong");
+ 		//System.out.println("\n\n CheckLogin " + login_ok + "\n\n");
