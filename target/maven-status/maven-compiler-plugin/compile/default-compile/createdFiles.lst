@@ -7,7 +7,8 @@ com/pinhost/app/webshopxxl2/dao/UserDao.class
 com/pinhost/app/webshopxxl2/beans/CategorieListBean.class
 com/pinhost/app/webshopxxl2/beans/MessageBean.class
 com/pinhost/app/webshopxxl2/beans/LoginBean.class
-com/pinhost/app/webshopxxl2/beans/CategorieBean.class
 com/pinhost/app/webshopxxl2/util/Util.class
+com/pinhost/app/webshopxxl2/beans/CategorieBean.class
 com/pinhost/app/webshopxxl2/dao/CategorieDao.class
+com/pinhost/app/webshopxxl2/DummyData/CategorieDummy.class
 com/pinhost/app/webshopxxl2/to/UserTO.class

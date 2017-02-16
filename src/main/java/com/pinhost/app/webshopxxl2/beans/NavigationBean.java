@@ -18,6 +18,8 @@ public class NavigationBean extends Util
 	// Statics for the Content Pages
 	private String CONTENT_LOGIN_PAGE = "../pages/login.xhtml";
 	private String CONTENT_CATEGORIE_PAGE = "../pages/categorie.xhtml";
+	private String CONTENT_PRODUCT_PAGE = "../pages/product.xhtml";
+	
 	
 	public NavigationBean(){
 		content_page = CONTENT_LOGIN_PAGE;
@@ -62,6 +64,10 @@ public class NavigationBean extends Util
 	}
 	public String getCONTENT_CATEGORIE_PAGE() {
 		return CONTENT_CATEGORIE_PAGE;
+	}
+	
+	public String getCONTENT_PRODUCT_PAGE() {
+		return CONTENT_PRODUCT_PAGE;
 	}
 	
 	/**

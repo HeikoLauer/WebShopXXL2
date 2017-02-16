@@ -27,6 +27,8 @@ CSS:
 	In dem Kundenspezifischen Dateien beginnen Klassen immer 
 	cus_CLASSNAME also mit einem cus_
 	
+	Styles die nur einmal vorkommen, also definitv an einem Objekt vorkommen, werden direkt
+	am Object definiert. Also : style=".."
 	
 Javascript
 ----------

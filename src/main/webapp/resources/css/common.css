@@ -116,7 +116,19 @@
 }
 
 
+/** All CSS for Categorie Panel **/
+
+.common_categoriepanel_main{
+	margin:20px 20px 20px 20px; 
+}
 	
+.common_categoriepanel_categorie{
+	float: left; 
+	border: 1px gray solid; 
+	margin:10px; 
+	padding: 5px;
+	border-radius: 5px;
+}	
 }
 
 
