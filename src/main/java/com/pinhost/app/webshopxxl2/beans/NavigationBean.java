@@ -1,6 +1,8 @@
 
 package com.pinhost.app.webshopxxl2.beans;
 
+import javax.faces.event.ActionEvent;
+
 import com.pinhost.app.webshopxxl2.util.Util;
 
 public class NavigationBean extends Util
@@ -94,7 +96,17 @@ public class NavigationBean extends Util
 		return getSessionBean().isUserIsOnline();
 	}
 	
+	
 	/******** Action Methods *************************************/
+	
+	/***
+	 * @author heiko
+	 * @param ActionEvent
+	 */
+	public void switchContentPage(ActionEvent event){
+		String content_page  = (String) event.getComponent().getAttributes().get("content_page");
+		setContent_page(content_page);
+	}
 	
 	/**
 	 * @author heiko

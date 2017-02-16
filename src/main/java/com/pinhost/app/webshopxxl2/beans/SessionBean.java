@@ -18,9 +18,13 @@ public class SessionBean {
 	}
 
 	public String getCategorie_id() {
+		
+		System.out.println("\n\nSessionBean : 22 : getCategorie_id() : " + categorie_id +"\n\n");
 		return categorie_id;
 	}
 	public void setCategorie_id(String categorie_id) {
+
+		System.out.println("\n\nSessionBean : 22 : getCategorie_id() : " + categorie_id +"\n\n");
 		this.categorie_id = categorie_id;
 	}
 

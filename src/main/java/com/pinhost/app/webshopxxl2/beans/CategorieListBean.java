@@ -35,7 +35,10 @@ public class CategorieListBean extends Util {
 	public void switchProductSeite(ActionEvent event){
 		
 		String categorie_id  = (String) event.getComponent().getAttributes().get("categorie_id");
-  		getNavigationBean().setContent_page(getNavigationBean().getCONTENT_PRODUCT_PAGE());
+  		
+		System.out.println("CategorieListBean : " + categorie_id);
+		
+		getNavigationBean().setContent_page(getNavigationBean().getCONTENT_PRODUCT_PAGE());
   		getSessionBean().setCategorie_id(categorie_id);
 	}
 }

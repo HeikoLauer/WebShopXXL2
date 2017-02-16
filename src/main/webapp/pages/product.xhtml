@@ -9,12 +9,14 @@
 	xmlns:h="http://java.sun.com/jsf/html">
  
     
-    <h:form id="form_categoriepage">
+    <h:form id="form_productpage">
   			
 		<div class="common_categoriepanel_main">		
-	
-			<ui:repeat var="categori" 
-			   value="#{categorieListBean.allCategorie}" 
+		
+			<div><p:outputLabel value="Produkte der Kategorie : #{sessionBean.categorie_id}" /></div>
+			
+			<ui:repeat var="product" 
+			   value="#{productListBean.allProduct}" 
 			   	 varstatus="status"> 
 				
 				<div class="common_categoriepanel_categorie">
@@ -23,10 +25,10 @@
  						<p:graphicImage 
 							height="150px"
 							width="150px"
-							value="../resources/dummyDaten/CategorieBilder/#{categori.icon}" />
+							value="../resources/dummyDaten/Produktbilder/#{product.icon}" />
 					</h:commandLink>			
 					
-					<div style="text-align: center;"><p:outputLabel value="#{categori.name}" /></div>
+					<div style="text-align: center;"><p:outputLabel value="#{product.name}" /></div>
 				
 				</div>
 

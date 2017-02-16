@@ -26,7 +26,8 @@ public class CategorieDao {
 		for(String categorieName : allCateggorieMAP.keySet()){
 			
 			categorieBean = new CategorieBean();
-			categorieBean.setIcon(allCateggorieMAP.get(categorieName));
+			categorieBean.setIcon(allCateggorieMAP.get(categorieName)+".png");
+			categorieBean.setId(allCateggorieMAP.get(categorieName));
 			categorieBean.setName(categorieName);
 			retList.add(categorieBean);
 		}

@@ -11,7 +11,12 @@
 		<menu id="id_menu_menubar" class="topnav #{navigationBean.menuBarClass}">
 	  		
 	  		<li>
-	  			<p:commandLink styleClass="active" value="Produktauswahl" action="#"  />
+	  			<p:commandLink ajax="false" styleClass="active" value="Produktauswahl" 
+	  				action="#"
+	  				actionListener="#{navigationBean.switchContentPage}" >
+	  				<f:attribute name="content_page" value="#{navigationBean.CONTENT_CATEGORIE_PAGE}" />
+	  				
+	  			</p:commandLink>	
 	  		</li>
 
 	  		<li>

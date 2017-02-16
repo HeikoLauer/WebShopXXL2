@@ -11,8 +11,34 @@
     
     <h:form id="form_categoriepage">
   			
-		<p:outputLabel value="Das ist die Kategegorie Seite" />
+		<div class="common_categoriepanel_main">		
+	
+			<ui:repeat var="categori" 
+			   value="#{categorieListBean.allCategorie}" 
+			   	 varstatus="status"> 
+				
+				<div class="common_categoriepanel_categorie">
 			
+					<h:commandLink  
+						action="#"
+						actionListener="#{categorieListBean.switchProductSeite}">		
+ 							<f:attribute name="categorie_id" value="#{categori.id}" />
+	
+ 						<p:graphicImage 
+							height="150px"
+							width="150px"
+							value="../resources/dummyDaten/CategorieBilder/#{categori.icon}" />
+						
+					</h:commandLink>			
+					
+					<div style="text-align: center;"><p:outputLabel value="#{categori.name}" /></div>
+				
+				</div>
+
+			</ui:repeat>
+			
+		</div>
+    
     </h:form>
 
 </html>

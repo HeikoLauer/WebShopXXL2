@@ -4,6 +4,9 @@ public class CategorieBean {
 	
 	private String name ="";
 	private String icon ="";
+	private String id ="";
+	
+	
 	public String getName() {
 		return name;
 	}
@@ -15,6 +18,12 @@ public class CategorieBean {
 	}
 	public void setIcon(String icon) {
 		this.icon = icon;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
 	}
 	
 	
