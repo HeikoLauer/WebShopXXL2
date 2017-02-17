@@ -1,39 +1,21 @@
 package com.pinhost.app.webshopxxl2.dao;
 
+import com.pinhost.common.webshopxxl2.dbconnect.DBUserConnect;
+import com.pinhost.common.webshopxxl2.to.UserTO;
 
-import java.util.HashMap;
-
-import com.pinhost.app.webshopxxl2.DummyData.UserDummy;
-import com.pinhost.app.webshopxxl2.beans.UserBean;
-import com.pinhost.app.webshopxxl2.to.UserTO;
 
 public class UserDao {
 	
 	/**
 	 * @author heiko
+	 * 
+	 * <br> Get a UserTO from UserDAO with the given loginname and password
+	 * 
 	 * @param name
 	 * @param password
-	 * @return
+	 * @return UserTO
 	 */
-	public static UserTO isUserLoginOk(String name, String password){
-		
-		UserTO retObject = null;
-
-		//TODO : Here read the LoginData from DataBase
-		
-		HashMap<String, String> result = UserDummy.readUser(name, password);
-		if(result != null ){
-			
-			retObject = new UserTO();
-			
-			retObject.setLoginName(result.get("loginName"));
-			retObject.setPassword(result.get("password"));
-			retObject.setFirstName(result.get("firstName"));
-			retObject.setLastName(result.get("lastName"));
-			retObject.setAmmount(Float.valueOf(result.get("ammout")));
-		}
-		
-		// User Login Data are incorrect
-		return retObject;
+	public static UserTO getUserForLogin(String loginname, String password){
+		return new DBUserConnect().readUserForLogin(loginname, password);
 	}
 }

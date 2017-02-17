@@ -1,8 +1,9 @@
 package com.pinhost.app.webshopxxl2.beans;
 
 import com.pinhost.app.webshopxxl2.dao.UserDao;
-import com.pinhost.app.webshopxxl2.to.UserTO;
 import com.pinhost.app.webshopxxl2.util.Util;
+import com.pinhost.common.webshopxxl2.to.UserTO;
+
 
 public class LoginBean extends Util{
 	
@@ -53,8 +54,8 @@ public class LoginBean extends Util{
 	 * @return "#" for the actionCommand Button
 	 */
 	public String login(){
-		
-		UserTO userTO = UserDao.isUserLoginOk(loginName, password);
+
+		UserTO userTO = UserDao.getUserForLogin(loginName, password);
 		
 		if(userTO != null){
 			getUserBean().setUser(userTO);

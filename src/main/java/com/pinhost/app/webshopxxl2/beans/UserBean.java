@@ -1,6 +1,6 @@
 package com.pinhost.app.webshopxxl2.beans;
 
-import com.pinhost.app.webshopxxl2.to.UserTO;
+import com.pinhost.common.webshopxxl2.to.UserTO;
 
 public class UserBean {
 	

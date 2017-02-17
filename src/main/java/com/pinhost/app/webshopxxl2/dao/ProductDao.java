@@ -4,11 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import com.pinhost.app.webshopxxl2.DummyData.CategorieDummy;
 import com.pinhost.app.webshopxxl2.DummyData.ProductDummy;
-import com.pinhost.app.webshopxxl2.beans.CategorieBean;
 import com.pinhost.app.webshopxxl2.beans.ProductBean;
-import com.pinhost.app.webshopxxl2.beans.SessionBean;
 import com.pinhost.app.webshopxxl2.util.Util;
 
 public class ProductDao extends Util {

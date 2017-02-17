@@ -1,4 +1,4 @@
-package com.pinhost.app.webshopxxl2.to;
+package com.pinhost.common.webshopxxl2.to;
 
 public class UserTO {
 

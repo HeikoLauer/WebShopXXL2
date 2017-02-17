@@ -46,5 +46,18 @@
 		<managed-bean-class>com.pinhost.app.webshopxxl2.beans.CategorieBean</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>productListBean</managed-bean-name>
+		<managed-bean-class>com.pinhost.app.webshopxxl2.beans.ProductListBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>productBean</managed-bean-name>
+		<managed-bean-class>com.pinhost.app.webshopxxl2.beans.ProductBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+
 	
 </faces-config>
