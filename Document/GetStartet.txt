@@ -1,5 +1,30 @@
+GIT
+-----------------------------------------------------
+Das GIT für die erste Zeit
+
 https://github.com/HeikoLauer/WebShopXXL2.git
 
+
+
+Eclipse
+----------------------------------------------------
 Für den Content Assist EL Expression
 Configure->Add JSF Capabilities
 Install JBoss Tools
+
+
+Zum starten der Applikation
+---------------------------------------------------
+Für die erste Zeit gibt es eine Derby Datenbank.
+Dieses ist im GIT mit enthalten
+Starten der Datenbank:
+derby-db/bin/startNetworkServer -h 0.0.0.0
+
+Url : localhost:8080/WebShopXXL2/login/mm.xhtml
+
+
+
+
+
+
+

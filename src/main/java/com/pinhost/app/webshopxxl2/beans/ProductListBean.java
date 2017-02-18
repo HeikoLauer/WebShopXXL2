@@ -19,9 +19,7 @@ public class ProductListBean extends Util {
 	 * @return List<CategorieBean>
 	 */
 	public List<ProductBean> getAllProduct(){
-		
-		System.out.println("\n\n ProductListBean 23 : " + getSessionBean().getCategorie_id());
-		
+
 		return ProductDao.getAllProduct(getSessionBean().getCategorie_id());
 	}
 	

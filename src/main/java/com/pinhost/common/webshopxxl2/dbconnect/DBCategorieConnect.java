@@ -2,6 +2,8 @@ package com.pinhost.common.webshopxxl2.dbconnect;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.pinhost.common.webshopxxl2.to.CategorieTO;
 
@@ -19,32 +21,35 @@ public class DBCategorieConnect extends DataBase{
 	 * @param username
 	 * @param password
 	 */
-	public CategorieTO readAllCateggorie() {
-
-		CategorieTO categorieTO = null;
+	public List<CategorieTO> readAllCateggorie() {
+		
+		List<CategorieTO> retList = new ArrayList<CategorieTO>();
 		
 		try {
 
 			String readSQl = "SELECT * FROM " + TABLE;
 			
 			ResultSet res = getResult(readSQl);
+
+			CategorieTO categorieTO = null;
 		
-			if(res.next()){
+			while(res.next()){
 
 				categorieTO = new CategorieTO();
 				
 				categorieTO.setId(res.getString(ID));
 				categorieTO.setName(res.getString(NAME));
 				categorieTO.setIcon_name(res.getString(ICON_NAME));
+			
+				retList.add(categorieTO);
 			}
 		
 		} catch (SQLException e) {
 			System.out.println("\n\n ----------------------------------------------------"
-					+ "\n  DBUserConnect 48 : readUserForLogin : " + e.toString());
+					+ "\n  DBCategorieConnect 43 : readUserForLogin : " + e.toString());
 		}
 		
-		return categorieTO;
+		return retList;
 	}
-	
 	
 }
