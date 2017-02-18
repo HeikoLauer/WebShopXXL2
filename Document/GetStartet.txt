@@ -6,6 +6,7 @@ https://github.com/HeikoLauer/WebShopXXL2.git
 
 
 
+
 Eclipse
 ----------------------------------------------------
 Für den Content Assist EL Expression
@@ -21,10 +22,5 @@ Starten der Datenbank:
 derby-db/bin/startNetworkServer -h 0.0.0.0
 
 Url : localhost:8080/WebShopXXL2/login/mm.xhtml
-
-
-
-
-
 
 
