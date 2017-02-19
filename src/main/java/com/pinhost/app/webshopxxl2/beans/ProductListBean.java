@@ -14,11 +14,6 @@ import com.pinhost.app.webshopxxl2.util.Util;
 
 public class ProductListBean extends Util {
 
-	/** The injected Beans ****/
-	
-	protected NavigationBean getNavigationBean() { return (NavigationBean) getBean("navigationBean"); }
-	protected SessionBean getSessionBean() { return (SessionBean) getBean("sessionBean"); }
-
 	/***
 	 * @author heiko
 	 * 

@@ -16,10 +16,10 @@ public class LoginBean extends Util{
 	
 	/** The injected Beans ****/
 	
-	protected NavigationBean getNavigationBean() { return (NavigationBean) getBean("navigationBean"); }
-	protected SessionBean getSessionBean() { return (SessionBean) getBean("sessionBean"); }
-	protected UserBean getUserBean() { return (UserBean) getBean("userBean"); }
-	protected MessageBean getMessageBean() { return (MessageBean) getBean("messageBean"); }
+//	protected NavigationBean getNavigationBean() { return (NavigationBean) getBean("navigationBean"); }
+//	protected SessionBean getSessionBean() { return (SessionBean) getBean("sessionBean"); }
+//	protected UserBean getUserBean() { return (UserBean) getBean("userBean"); }
+//	protected MessageBean getMessageBean() { return (MessageBean) getBean("messageBean"); }
 	
 	/** Private Objects **/	
 	private String loginName="";

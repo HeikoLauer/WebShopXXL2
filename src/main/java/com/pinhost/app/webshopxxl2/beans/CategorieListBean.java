@@ -16,12 +16,9 @@ import com.pinhost.app.webshopxxl2.util.Util;
 
 public class CategorieListBean extends Util {
 
-	/** The injected Beans ****/
-	
-	protected NavigationBean getNavigationBean() { return (NavigationBean) getBean("navigationBean"); }
-	protected SessionBean getSessionBean() { return (SessionBean) getBean("sessionBean"); }
 
 	List<CategorieBean> categorieList = null;
+	
 	/***
 	 * @author heiko
 	 * 

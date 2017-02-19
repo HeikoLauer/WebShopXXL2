@@ -8,6 +8,12 @@
 package com.pinhost.app.webshopxxl2.util;
 
 import javax.faces.context.FacesContext;
+
+import com.pinhost.app.webshopxxl2.beans.MessageBean;
+import com.pinhost.app.webshopxxl2.beans.NavigationBean;
+import com.pinhost.app.webshopxxl2.beans.SessionBean;
+import com.pinhost.app.webshopxxl2.beans.UserBean;
+
 import javax.el.ExpressionFactory;
 import javax.el.ValueExpression;
 
@@ -28,4 +34,13 @@ public class Util {
         Object o = ve.getValue(fc.getELContext());
         return o;
     }
+	
+	/*** Getter for the ManagedBeans **********************/
+	
+	public NavigationBean getNavigationBean() { return (NavigationBean) getBean("navigationBean"); }
+	public SessionBean getSessionBean() { return (SessionBean) getBean("sessionBean"); }
+	public UserBean getUserBean() { return (UserBean) getBean("userBean"); }
+	public MessageBean getMessageBean() { return (MessageBean) getBean("messageBean"); }
+
+	
 }

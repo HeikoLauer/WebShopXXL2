@@ -14,10 +14,6 @@ import com.pinhost.app.webshopxxl2.util.Util;
 public class NavigationBean extends Util
 {
 	
-	protected SessionBean getSessionBean() { return (SessionBean) getBean("sessionBean"); }
-	protected UserBean getUserBean() { return (UserBean) getBean("userBean"); }
-	protected MessageBean getMessageBean() { return (MessageBean) getBean("messageBean"); }
-
 	private String header_page = "../template/header.xhtml";
 	private String error_page = "../template/error.xhtml";
 	private String footer_page = "../template/footer.xhtml";
