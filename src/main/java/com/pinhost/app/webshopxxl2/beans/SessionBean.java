@@ -1,12 +1,19 @@
+/****************************************************/
+/* @Author 		: heiko lauer                       */
+/* @Date        : 2017.02.16                        */
+/* @Description : Bean for the Session Data         */
+/* @Scope		: Session                           */            
+/****************************************************/
+
 package com.pinhost.app.webshopxxl2.beans;
 
 
 public class SessionBean {
 
-	private boolean userIsOnline = false;
-	private String categorie_id;
-	private String product_id;
+	private boolean userIsOnline = false;  // after successful login is true
 	
+	private CategorieBean categorieBean;  // The actual Categorie
+	private ProductBean productBean;      // The actual Product
 	
 	/****  Getter and setter ****/
 	
@@ -16,26 +23,20 @@ public class SessionBean {
 	public void setUserIsOnline(boolean userIsOnline) {
 		this.userIsOnline = userIsOnline;
 	}
-
-	public String getCategorie_id() {
-		
-		System.out.println("\n\nSessionBean : 22 : getCategorie_id() : " + categorie_id +"\n\n");
-		return categorie_id;
+	
+	public CategorieBean getCategorieBean() {
+		return categorieBean;
 	}
-	public void setCategorie_id(String categorie_id) {
-
-		System.out.println("\n\nSessionBean : 22 : getCategorie_id() : " + categorie_id +"\n\n");
-		this.categorie_id = categorie_id;
-	}
-
-	public String getProduct_id() {
-		return product_id;
+	public void setCategorieBean(CategorieBean categorieBean) {
+		this.categorieBean = categorieBean;
 	}
 	
-	public void setProduct_id(String product_id) {
-		this.product_id = product_id;
+	public ProductBean getProductBean() {
+		return productBean;
+	}
+	public void setProductBean(ProductBean productBean) {
+		this.productBean = productBean;
 	}
 
-	
 	
 }

@@ -1,3 +1,10 @@
+/****************************************************/
+/* @Author 		: heiko lauer                       */
+/* @Date        : 2017.02.10                        */
+/* @Description : Util                              */
+/* @Scope		: No Bean                           */            
+/****************************************************/
+
 package com.pinhost.app.webshopxxl2.util;
 
 import javax.faces.context.FacesContext;

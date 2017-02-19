@@ -1,3 +1,10 @@
+/****************************************************/
+/* @Author 		: heiko lauer                       */
+/* @Date        : 2017.02.16                        */
+/* @Description : Bean for the User                 */
+/* @Scope		: Session                           */            
+/****************************************************/
+
 package com.pinhost.app.webshopxxl2.beans;
 
 import com.pinhost.common.webshopxxl2.to.UserTO;
@@ -55,8 +62,13 @@ public class UserBean {
 	
 	/*** Action Methoden *******/
 
+	/**
+	 * @author heiko
+	 * <br> receive a TO Object 
+	 * <br> and set the Data in the Bean 
+	 * @param userTO
+	 */
 	public void setUser(UserTO userTO){
-		
 		setLoginName(userTO.getLoginName());
 		setPassword(userTO.getPassword());
 		setFirstName(userTO.getFirstName());
@@ -66,6 +78,8 @@ public class UserBean {
 	
 	/***
 	 * @author heiko
+	 * <br> clear the actual User after logout
+	 * <br> call from Navigation Bean -> Logout
 	 */
 	public void clearUser(){
 		loginName="";

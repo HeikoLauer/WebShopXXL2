@@ -1,3 +1,9 @@
+/****************************************************/
+/* @Author 		: heiko lauer                       */
+/* @Date        : 2017.02.16                        */
+/* @Description : Bean for the Navigation           */
+/* @Scope		: Session                           */            
+/****************************************************/
 
 package com.pinhost.app.webshopxxl2.beans;
 

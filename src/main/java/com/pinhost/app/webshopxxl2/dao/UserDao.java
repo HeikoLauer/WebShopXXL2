@@ -1,3 +1,10 @@
+/****************************************************/
+/* @Author 		: heiko lauer                       */
+/* @Date        : 2017.02.10                        */
+/* @Description : DAO for User                      */
+/* @Scope		: No Bean                           */            
+/****************************************************/
+
 package com.pinhost.app.webshopxxl2.dao;
 
 import com.pinhost.common.webshopxxl2.dbconnect.DBUserConnect;

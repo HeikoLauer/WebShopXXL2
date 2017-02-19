@@ -1,3 +1,10 @@
+/****************************************************/
+/* @Author 		: heiko lauer                       */
+/* @Date        : 2017.02.10                        */
+/* @Description : DAO for Categories                */
+/* @Scope		: No Bean                           */            
+/****************************************************/
+
 package com.pinhost.app.webshopxxl2.dao;
 
 import java.util.ArrayList;
@@ -16,6 +23,7 @@ public class CategorieDao {
 	 * <br> Transfer the Properties from CategorieTO to CategorieBean
 	 * <br> Set the CategorieBean in a List of CategorieBean
 	 * <br> Return the List
+	 * <br> Call from CategorieListBean
 	 * 
 	 * @return List of CategorieBean
 	 */
@@ -29,13 +37,16 @@ public class CategorieDao {
 		CategorieBean categorieBean;
 		
 		// Transfer the Properties
+		int i=0; // Index for the List
 		for(CategorieTO categorieTO : categorieTOList){
 			
 			categorieBean = new CategorieBean();
-
+			categorieBean.setIndex(i);
 			categorieBean.setId(categorieTO.getId());
 			categorieBean.setName(categorieTO.getName());
 			categorieBean.setIcon_name(categorieTO.getIcon_name());
+			
+			i++;
 			
 			retList.add(categorieBean);
 		}

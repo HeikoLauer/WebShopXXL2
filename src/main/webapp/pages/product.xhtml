@@ -13,7 +13,7 @@
   			
 		<div class="common_categoriepanel_main">		
 		
-			<div><p:outputLabel value="Produkte der Kategorie : #{sessionBean.categorie_id}" /></div>
+			<div><p:outputLabel value="Produkte der Kategorie : #{sessionBean.categorieBean.name}" /></div>
 			
 			<ui:repeat var="product" 
 			   value="#{productListBean.allProduct}" 

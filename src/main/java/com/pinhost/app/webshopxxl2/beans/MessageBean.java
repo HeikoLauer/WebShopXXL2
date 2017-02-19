@@ -1,4 +1,12 @@
+/****************************************************/
+/* @Author 		: heiko lauer                       */
+/* @Date        : 2017.02.10                        */
+/* @Description : Bean for Messages                 */
+/* @Scope		: Request                           */            
+/****************************************************/
+
 package com.pinhost.app.webshopxxl2.beans;
+
 import com.pinhost.app.webshopxxl2.util.MeldungenUtil;
 
 public class MessageBean {
@@ -6,10 +14,16 @@ public class MessageBean {
 	private String messageText;
 	private String messageCSS;
 
+	/***
+	 * @author heiko
+	 * <br> Init the Bean
+	 */
 	public MessageBean(){
 		setLoginStartState();
 	}
 
+	/**** Getter and Setter *************************/
+	
 	public String getMessageText() {
 		return messageText;
 	}

@@ -1,3 +1,10 @@
+/****************************************************/
+/* @Author 		: heiko lauer                       */
+/* @Date        : 2017.02.10                        */
+/* @Description : DAO for Products                  */
+/* @Scope		: No Bean                           */            
+/****************************************************/
+
 package com.pinhost.app.webshopxxl2.dao;
 
 import java.util.ArrayList;

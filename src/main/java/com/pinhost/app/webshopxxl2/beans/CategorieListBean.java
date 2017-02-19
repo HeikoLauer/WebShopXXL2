@@ -1,3 +1,10 @@
+/****************************************************/
+/* @Author 		: heiko lauer                       */
+/* @Date        : 2017.02.16                        */
+/* @Description : Bean for a CategorieList          */
+/* @Scope		: Seession                          */            
+/****************************************************/
+
 package com.pinhost.app.webshopxxl2.beans;
 
 import java.util.List;
@@ -14,6 +21,7 @@ public class CategorieListBean extends Util {
 	protected NavigationBean getNavigationBean() { return (NavigationBean) getBean("navigationBean"); }
 	protected SessionBean getSessionBean() { return (SessionBean) getBean("sessionBean"); }
 
+	List<CategorieBean> categorieList = null;
 	/***
 	 * @author heiko
 	 * 
@@ -21,7 +29,8 @@ public class CategorieListBean extends Util {
 	 * @return List<CategorieBean>
 	 */
 	public List<CategorieBean> getAllCategorie(){
-		return CategorieDao.getAllCategorie();
+		categorieList = CategorieDao.getAllCategorie();
+		return categorieList;
 	}
 	
 	
@@ -34,11 +43,9 @@ public class CategorieListBean extends Util {
 	 */
 	public void switchProductSeite(ActionEvent event){
 		
-		String categorie_id  = (String) event.getComponent().getAttributes().get("categorie_id");
-  		
-		System.out.println("CategorieListBean : " + categorie_id);
+		Integer categorie_index  = (Integer) event.getComponent().getAttributes().get("categorie_index");
 		
 		getNavigationBean().setContent_page(getNavigationBean().getCONTENT_PRODUCT_PAGE());
-  		getSessionBean().setCategorie_id(categorie_id);
-	}
+  		getSessionBean().setCategorieBean(categorieList.get(categorie_index));
+ 	}
 }
