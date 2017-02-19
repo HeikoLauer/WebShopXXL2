@@ -1,3 +1,10 @@
+/****************************************************/
+/* @Author 		: heiko lauer                       */
+/* @Date        : 2017.02.16                        */
+/* @Description : Bean for Login Page               */
+/* @Scope		: Request                           */            
+/****************************************************/
+
 package com.pinhost.app.webshopxxl2.beans;
 
 import com.pinhost.app.webshopxxl2.dao.UserDao;
@@ -17,7 +24,6 @@ public class LoginBean extends Util{
 	/** Private Objects **/	
 	private String loginName="";
 	private String password="";
-		
 	
 	/** Public Methods **/
 	
