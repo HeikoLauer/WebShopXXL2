@@ -3,7 +3,8 @@ GIT
 Das GIT für die erste Zeit
 
 https://github.com/HeikoLauer/WebShopXXL2.git
-
+User : HeikoLauer
+Pass : WebShopXXL2
 
 
 
