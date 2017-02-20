@@ -39,7 +39,7 @@ public class Util {
 	
 	public NavigationBean getNavigationBean() { return (NavigationBean) getBean("navigationBean"); }
 	public SessionBean getSessionBean() { return (SessionBean) getBean("sessionBean"); }
-	public UserBean getUserBean() { return (UserBean) getBean("userBean"); }
+	public static UserBean getUserBean() { return (UserBean) getBean("userBean"); }
 	public MessageBean getMessageBean() { return (MessageBean) getBean("messageBean"); }
 
 	

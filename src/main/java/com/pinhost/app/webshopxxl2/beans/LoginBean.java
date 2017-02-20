@@ -9,17 +9,9 @@ package com.pinhost.app.webshopxxl2.beans;
 
 import com.pinhost.app.webshopxxl2.dao.UserDao;
 import com.pinhost.app.webshopxxl2.util.Util;
-import com.pinhost.common.webshopxxl2.to.UserTO;
-
 
 public class LoginBean extends Util{
 	
-	/** The injected Beans ****/
-	
-//	protected NavigationBean getNavigationBean() { return (NavigationBean) getBean("navigationBean"); }
-//	protected SessionBean getSessionBean() { return (SessionBean) getBean("sessionBean"); }
-//	protected UserBean getUserBean() { return (UserBean) getBean("userBean"); }
-//	protected MessageBean getMessageBean() { return (MessageBean) getBean("messageBean"); }
 	
 	/** Private Objects **/	
 	private String loginName="";
@@ -60,14 +52,11 @@ public class LoginBean extends Util{
 	 * @return "#" for the actionCommand Button
 	 */
 	public String login(){
-
-		UserTO userTO = UserDao.getUserForLogin(loginName, password);
 		
-		if(userTO != null){
-			getUserBean().setUser(userTO);
+		if(UserDao.getUserForLogin(loginName, password)){
 			getSessionBean().setUserIsOnline(true);
 			getNavigationBean().setContent_page(getNavigationBean().getCONTENT_CATEGORIE_PAGE());
-			getMessageBean().setLoginCorrectState(userTO.getFirstName(), userTO.getLastName());
+			getMessageBean().setLoginCorrectState(getUserBean().getFirstName(), getUserBean().getLastName());
 		} else {
 			getMessageBean().setLoginWrongState();
 		}
