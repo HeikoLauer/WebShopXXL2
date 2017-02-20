@@ -37,10 +37,9 @@ public class Util {
 	
 	/*** Getter for the ManagedBeans **********************/
 	
-	public NavigationBean getNavigationBean() { return (NavigationBean) getBean("navigationBean"); }
-	public SessionBean getSessionBean() { return (SessionBean) getBean("sessionBean"); }
+	public static NavigationBean getNavigationBean() { return (NavigationBean) getBean("navigationBean"); }
+	public static SessionBean getSessionBean() { return (SessionBean) getBean("sessionBean"); }
 	public static UserBean getUserBean() { return (UserBean) getBean("userBean"); }
-	public MessageBean getMessageBean() { return (MessageBean) getBean("messageBean"); }
+	public static MessageBean getMessageBean() { return (MessageBean) getBean("messageBean"); }
 
-	
 }
