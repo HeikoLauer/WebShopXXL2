@@ -5,7 +5,7 @@
 /* @Scope		: No Bean                           */            
 /****************************************************/
 
-package com.pinhost.app.webshopxxl2.dao;
+package com.pinhost.app.webshopxxl2.facade;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,7 @@ import com.pinhost.app.webshopxxl2.util.Util;
 import com.pinhost.common.webshopxxl2.dbconnect.DBProductConnect;
 import com.pinhost.common.webshopxxl2.to.ProductTO;
 
-public class ProductDao extends Util {
+public class ProductFacade extends Util {
 	
 
 	/**

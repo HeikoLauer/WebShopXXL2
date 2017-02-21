@@ -5,7 +5,7 @@
 /* @Scope		: No Bean                           */            
 /****************************************************/
 
-package com.pinhost.app.webshopxxl2.dao;
+package com.pinhost.app.webshopxxl2.facade;
 
 
 import com.pinhost.app.webshopxxl2.util.Util;
@@ -13,7 +13,7 @@ import com.pinhost.common.webshopxxl2.dbconnect.DBUserConnect;
 import com.pinhost.common.webshopxxl2.to.UserTO;
 
 
-public class UserDao extends Util {
+public class UserFacade extends Util {
 	
 	
 	/**

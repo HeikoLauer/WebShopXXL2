@@ -11,7 +11,7 @@ import java.util.List;
 
 import javax.faces.event.ActionEvent;
 
-import com.pinhost.app.webshopxxl2.dao.CategorieDao;
+import com.pinhost.app.webshopxxl2.facade.CategorieFacade;
 import com.pinhost.app.webshopxxl2.util.Util;
 
 public class CategorieListBean extends Util {
@@ -26,7 +26,7 @@ public class CategorieListBean extends Util {
 	 * @return List<CategorieBean>
 	 */
 	public List<CategorieBean> getAllCategorie(){
-		categorieList = CategorieDao.getAllCategorie();
+		categorieList = CategorieFacade.getAllCategorie();
 		return categorieList;
 	}
 	

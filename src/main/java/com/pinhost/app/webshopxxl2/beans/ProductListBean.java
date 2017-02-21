@@ -9,7 +9,7 @@ package com.pinhost.app.webshopxxl2.beans;
 
 import java.util.List;
 
-import com.pinhost.app.webshopxxl2.dao.ProductDao;
+import com.pinhost.app.webshopxxl2.facade.ProductFacade;
 import com.pinhost.app.webshopxxl2.util.Util;
 
 public class ProductListBean extends Util {
@@ -21,7 +21,7 @@ public class ProductListBean extends Util {
 	 * @return List<CategorieBean>
 	 */
 	public List<ProductBean> getAllProduct(){
-		return ProductDao.getAllProduct(getSessionBean().getCategorieBean().getId());
+		return ProductFacade.getAllProduct(getSessionBean().getCategorieBean().getId());
 	}
 	
 }

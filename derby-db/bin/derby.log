@@ -1,14 +1,14 @@
-Sun Feb 19 16:35:58 CET 2017 : Apache Derby Network Server 10.8.3.2 - (1557835) wurde gestartet und ist bereit, Verbindungen am Port 1527 zu akzeptieren.
+Mon Feb 20 13:52:31 CET 2017 : Apache Derby Network Server 10.8.3.2 - (1557835) wurde gestartet und ist bereit, Verbindungen am Port 1527 zu akzeptieren.
 ----------------------------------------------------------------
-Sun Feb 19 16:36:21 CET 2017:
-Booten von Derby Version The Apache Software Foundation - Apache Derby - 10.8.3.2 - (1557835): Instanz a816c00e-015a-5703-e972-ffffb95ff964
-für Datenbankverzeichnis /home/heiko/Dropbox/Develop/MM/WebShopXXL2/derby-db/bin/webshopXXL   mit Klassenladeprogrammn sun.misc.Launcher$AppClassLoader@4d43691d
+Mon Feb 20 13:58:33 CET 2017:
+Booten von Derby Version The Apache Software Foundation - Apache Derby - 10.8.3.2 - (1557835): Instanz a816c00e-015a-5b94-a0de-00002f30a315
+für Datenbankverzeichnis /home/heiko/Dropbox/Develop/MM/CommonWebShop/derby-db/bin/webshopXXL   mit Klassenladeprogrammn sun.misc.Launcher$AppClassLoader@a0ccc96
 
 java.vendor=Oracle Corporation
-java.runtime.version=1.7.0_121-b00
-user.dir=/home/heiko/Dropbox/Develop/MM/WebShopXXL2/derby-db/bin
+java.runtime.version=1.7.0_131-b00
+user.dir=/home/heiko/Dropbox/Develop/MM/CommonWebShop/derby-db/bin
 os.name=Linux
 os.arch=amd64
 os.version=4.4.46-11-default
-derby.system.home=/home/heiko/Dropbox/Develop/MM/WebShopXXL2/derby-db/bin
+derby.system.home=/home/heiko/Dropbox/Develop/MM/CommonWebShop/derby-db/bin
 Das Ladeprogramm für Datenbankklassen wurde gestartet - derby.database.classpath=''

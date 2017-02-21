@@ -7,7 +7,7 @@
 
 package com.pinhost.app.webshopxxl2.beans;
 
-import com.pinhost.app.webshopxxl2.dao.UserDao;
+import com.pinhost.app.webshopxxl2.facade.UserFacade;
 import com.pinhost.app.webshopxxl2.util.Util;
 
 public class LoginBean extends Util{
@@ -53,7 +53,7 @@ public class LoginBean extends Util{
 	 */
 	public String login(){
 		
-		if(UserDao.getUserForLogin(loginName, password)){
+		if(UserFacade.getUserForLogin(loginName, password)){
 			getSessionBean().setUserIsOnline(true);
 			getNavigationBean().setContent_page(getNavigationBean().getCONTENT_CATEGORIE_PAGE());
 			getMessageBean().setLoginCorrectState(getUserBean().getFirstName(), getUserBean().getLastName());

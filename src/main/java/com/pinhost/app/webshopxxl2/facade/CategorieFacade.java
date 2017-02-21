@@ -5,7 +5,7 @@
 /* @Scope		: No Bean                           */            
 /****************************************************/
 
-package com.pinhost.app.webshopxxl2.dao;
+package com.pinhost.app.webshopxxl2.facade;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ import com.pinhost.app.webshopxxl2.beans.CategorieBean;
 import com.pinhost.common.webshopxxl2.dbconnect.DBCategorieConnect;
 import com.pinhost.common.webshopxxl2.to.CategorieTO;
 
-public class CategorieDao {
+public class CategorieFacade {
 	
 	/**
 	 * @author heiko
