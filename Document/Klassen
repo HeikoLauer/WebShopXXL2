@@ -1,0 +1,74 @@
+User -> Customer
+
+	
+	String loginname  
+	String password
+	
+	
+	Long creditLimit 	
+	Long reachedCreditLimit 	
+		
+	String name ( Filial Name )
+	
+		Adresse
+		String filial_Name
+		String _strasse
+		String _number
+		String _plz
+		String _ort
+		String _telefon
+		String _fax
+		String _mobil
+		String _mail
+		String _position ( nur wenn gefüllt )
+		
+		String filial_titel ( Herr Frau )
+		String filial_ansprech_name (Vor und Zuname )
+		String _strasse
+		String _number
+		String _plz
+		String _ort
+		String _telefon
+		String _fax
+		String _mobil
+		String _mail
+		String _position ( nur wenn gefüllt )
+		
+		
+	List<Produkt> listeDerErlaubtenProdukten
+
+		
+		
+	
+ArtikelTypCategory  ( Produkt-Gruppen )
+
+	String name
+	List<ArtikelTypGroup> 	
+	
+	ArtikelTypGroup  ( Produkte )
+
+		long id
+		String name
+		String image = Bild des 1. ArtikelType		
+		List<ArtikelTyp>
+	
+	
+			ArtikelTyp	
+			
+				long id
+				String name
+				String image
+				Long value ( Preis Ausgabe als String )
+				Long maxQuantity ( max Anzahl )
+				Long quantity ( aktuelle Anzahl )
+				Long totalValue // max Preis
+				String currency
+				
+				
+				// Tabelle Warenkorb
+				
+				Artikel 			Anzahl		Preis		Gesamtpreis 
+				/** es wird ein Button zum erhöhen und erniedrigen benötigt ***/
+				
+				
+				

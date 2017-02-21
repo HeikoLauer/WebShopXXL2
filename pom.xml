@@ -99,13 +99,7 @@
 		    <artifactId>derbyclient</artifactId>
 		    <version>10.11.1.1</version>
 		</dependency>
-
-
-		<dependency>
-			<groupId>CommonWebShopGID</groupId>
-			<artifactId>CommonWebShopID</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		
 	</dependencies>
 
 	<build>
