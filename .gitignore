@@ -1,1 +1,3 @@
 /target/
+/derby-db/
+.settings/
