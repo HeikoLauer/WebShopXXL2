@@ -3,48 +3,102 @@
 /* @Date        : 2017.02.24                                   */
 /* @LastChange  : 2017.02.24                                   */
 /* @Description : Bean for Warehouse Page                      */
-/* @Scope		: Request                                      */            
+/* @Scope		: Session                                      */            
 /***************************************************************/
 
 package com.pinhost.app.webshopxxl2.dataBeans;
 
+import java.util.ArrayList;
+import java.util.List;
 
-public class WarehouseBean {
+import javax.faces.event.ActionEvent;
 
-	private long total_value = 0L;
-    private int productCounter=0;
-    private long leftAccount=0;
-	
+import com.pinhost.app.webshopxxl2.util.Util;
+
+public class WarehouseBean extends Util {
+
+    private List<ArtikelTypBean> allArtikelTypBeans = new ArrayList<ArtikelTypBean>();
+
+    
 	/*** Getter and Setter ********************/
 	
-	public String getTotal_value() {
-		return ""+ total_value;
+	public List<ArtikelTypBean> getAllWarehouseArtikelTypBeans() {
+		return allArtikelTypBeans;
 	}
 
-	public void setTotal_value(String total_value) {
-		total_value.trim();
-		this.total_value = Long.parseLong(total_value);
+	public void setAllWarehouseArtikelTypBeans(List<ArtikelTypBean> allArtikelTypBeans) {
+		this.allArtikelTypBeans = allArtikelTypBeans;
 	}
 
-	public String getProductCounter() {
-		return "" + productCounter;
-	}
-
-	public void setProductCounter(String productCounter) {
-		productCounter.trim();
-		this.productCounter = Integer.parseInt(productCounter);
-	}
-
-	public String getLeftAccount() {
-		return ""+leftAccount;
-	}
-
-	public void setLeftAccount(String leftAccount) {
-		leftAccount.trim();
-		this.leftAccount = Long.parseLong(leftAccount);
-	}
-
+	/**** Calculated Getter *************************/
 	
+	/***
+	 * @author heiko
+	 * 
+	 * @return
+	 */
+	public String getTotalValueAllArtikelTyp(){
+		Long retValue=0L;
+		for(ArtikelTypBean bean : allArtikelTypBeans){
+			retValue = retValue +  Long.parseLong(bean.getTotalValue());
+		}
+		return retValue.toString();
+	}
+	
+	/***
+	 * @author heiko
+	 * 
+	 * @return
+	 */
+	public String getTotalAllArtikelTyp(){
+		Integer retValue=0;
+		for(ArtikelTypBean bean : allArtikelTypBeans){
+			retValue = retValue + bean.getArtikelCounter();
+		}
+		return retValue.toString();
+	}
+	
+	
+	/*** Action Methods ***********************/
+	
+	/**
+	 * @author heiko
+	 * @param event
+	 */
+	public void addNewArtikelTypBean(ActionEvent event){
+		
+		ArtikelTypBean artikeltypBean  = (ArtikelTypBean) event.getComponent().getAttributes().get("artikeltyp_index");
+		artikeltypBean.setArtikelCounter(1);
+		allArtikelTypBeans.add(artikeltypBean);
 
-
+		getNavigationBean().setContent_page(getNavigationBean().getCONTENT_WAREHOUSE_PAGE());
+	}
+	
+	/****
+	 * @author heiko
+	 * 
+	 * @param event
+	 */
+	public void incrementArtikelTyp(ActionEvent event){
+		
+		ArtikelTypBean artikeltypBean  = (ArtikelTypBean) event.getComponent().getAttributes().get("artikeltyp_index");
+		artikeltypBean.setArtikelCounter(artikeltypBean.getArtikelCounter()+1);
+	}
+	
+	/****
+	 * @author heiko
+	 * 
+	 * 
+	 * @param event
+	 */
+	public void decrementArtikelTyp(ActionEvent event){
+		
+		ArtikelTypBean artikeltypBean  = (ArtikelTypBean) event.getComponent().getAttributes().get("artikeltyp_index");
+		
+		artikeltypBean.setArtikelCounter(artikeltypBean.getArtikelCounter()-1);
+		if(artikeltypBean.getArtikelCounter()==0){
+			allArtikelTypBeans.remove(artikeltypBean);
+		}
+	}
+	
 }

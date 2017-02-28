@@ -8,9 +8,12 @@
 }
 
 .warehouse_header_row{
-  	display: table-row;
-   	background-color: grey;
-  	height:20px;
+  	height: 30px;
+	border: 1px #2f2a2a solid;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	margin: 1px 0px 5px 5px;
+	padding: 2px 0px 0px 10px;
 }
 
 .warehouse_header_row_border{
@@ -34,6 +37,7 @@
 	display: table-cell;
 }
 
+.warehouse_column300{width: 300px;}
 .warehouse_column60{width: 60px;}
 .warehouse_column150{width: 150px;}
 .warehouse_column300{width: 300px;}

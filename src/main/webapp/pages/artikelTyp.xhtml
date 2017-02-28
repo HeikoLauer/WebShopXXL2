@@ -24,10 +24,13 @@
 					
 					<!--  Begin DIV Artikelgroup  -->
 					<div class="artikel_group" style="text-align: center;">
-									
- 						<p:graphicImage styleClass="artikel_group_icon" 
-							value="../resources/dummyDaten/CategorieBilder/#{artikelTypCategorie.image}" />
-							
+						
+						<p:commandLink ajax="false" action="#" actionListener="#{warehouseBean.addNewArtikelTypBean}">			
+ 							<p:graphicImage styleClass="artikel_group_icon" 
+								value="../resources/dummyDaten/CategorieBilder/#{artikelTypCategorie.image}" />
+							<f:attribute name="artikeltyp_index" value="#{artikelTyp.artikelTypBean}" />
+						</p:commandLink>	
+						
 						<div style="text-align: center;">
 							<p:outputLabel value="#{artikelTypGroup.name}" /></div>
 				

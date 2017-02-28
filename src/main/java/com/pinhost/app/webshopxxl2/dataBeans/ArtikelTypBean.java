@@ -22,6 +22,10 @@ public class ArtikelTypBean {
 	private Long totalValue;
 	private String currency;
 	
+	// This is not a property from the ArtikelTyp in the Database
+	// This is the counter for the warehouse
+	private int artikelCounter = 0;
+	
 	/**** Getter and Setter   *****************/
 	
 	public int getIndex() {
@@ -44,7 +48,6 @@ public class ArtikelTypBean {
 	public void setArtikelGroup_id(long artikelGroup_id) {
 		this.artikelGroup_id = artikelGroup_id;
 	}
-
 	
 	public String getName() {
 		return name;
@@ -70,18 +73,18 @@ public class ArtikelTypBean {
 	public void setMaxQuantity(Long maxQuantity) {
 		this.maxQuantity = maxQuantity;
 	}
+	
 	public Long getQuantity() {
 		return quantity;
 	}
 	public void setQuantity(Long quantity) {
 		this.quantity = quantity;
 	}
-	public Long getTotalValue() {
-		return totalValue;
-	}
+	
 	public void setTotalValue(Long totalValue) {
 		this.totalValue = totalValue;
 	}
+	
 	public String getCurrency() {
 		return currency;
 	}
@@ -89,4 +92,33 @@ public class ArtikelTypBean {
 		this.currency = currency;
 	}
 	
+	
+	/*** Getter and setter for the Properties ***/
+	/*** for the Warehouse                    ***/
+	
+	public int getArtikelCounter() {
+		return artikelCounter;
+	}
+	public void setArtikelCounter(int artikelCounter) {
+		this.artikelCounter = artikelCounter;
+	}
+	
+	/***
+	 * @author heiko
+	 * <br> calculate the totalValue
+	 * @return
+	 */
+	public String getTotalValue(){
+		totalValue = artikelCounter * value;
+		return "" +(totalValue);
+	}
+	
+	/***
+	 * @author heiko
+	 * <<br> return himself
+	 * @return
+	 */
+	public ArtikelTypBean getArtikelTypBean(){
+		return this;
+	}
 }
