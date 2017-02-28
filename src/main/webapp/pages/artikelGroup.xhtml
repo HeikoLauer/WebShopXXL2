@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"	
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+    
+    <h:form id="form_artikelgrouppage">
+		
+		<!--  Begin outer div for ArticelTypKategorie -->
+		<div class="artikel_main">		
+			
+			<!--  Begin outer Loop for ArticelTypKategorie -->
+			<ui:repeat var="artikelTypCategorie" 
+			   value="#{artikelListBean.allArticelTypKategorieBean}" 
+			   	 varstatus="status"> 
+		
+				<!-- Begin outer Div     -->
+				<div class="artikel_categorie">
+					<p:outputLabel  styleClass="artikel_font_artikelCategorie" 
+									value="#{artikelTypCategorie.name}" />
+					
+					<div> <!-- Begin Row DIV suround the Artikel Group Row -->
+
+						<!--  Begin inner Loop for ArticelTypGroup -->
+						<ui:repeat var="artikelTypGroup" 
+			   	  	  		       value="#{artikelTypCategorie.artikelTypGroupList}" 
+			   	 			 	   varstatus="status"> 
+						
+							<!--  Begin DIV Artikelgroup  -->
+							<div class="artikel_group" style="text-align: center;">
+							
+								<p:commandLink ajax="false" 
+									 action="#" actionListener="#{artikelListBean.switchArtikelGroup}">		
+		 								<f:attribute name="artikelTypCategorie_index" value="#{artikelTypCategorie.index}" />
+		 								<f:attribute name="artikelTypGroup_index" value="#{artikelTypGroup.index}" />
+		 									
+		 								<p:graphicImage styleClass="artikel_group_icon" 
+											value="../resources/dummyDaten/CategorieBilder/#{artikelTypCategorie.image}" />
+								</p:commandLink>			
+								
+								<div style="text-align: center;">
+									<p:outputLabel value="#{artikelTypGroup.name}" /></div>
+					
+							</div> <!-- End DIV Artikelgroup  -->
+
+						</ui:repeat> <!--  Begin inner Loop for ArticelTypGroup -->
+						
+					</div> <!-- End Row DIV surround the Artikel Group Row -->	
+				
+				</div> <!-- End Outer Div     -->					
+						
+			<!--  End outer Loop for ArticelTypKategorie -->
+			</ui:repeat>
+					
+		<!--  End outer div for ArticelTypKategorie -->
+		</div>
+    
+    </h:form>
+
+</html>

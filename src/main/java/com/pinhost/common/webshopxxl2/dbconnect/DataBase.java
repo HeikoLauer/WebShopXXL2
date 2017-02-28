@@ -23,35 +23,14 @@ public class DataBase {
 	 */
 	private void createConnection() {
 
-		System.out.println("\n-------------------------------\n"
-				+ " DataBase : 23   createConnection \n" );
-
 		try{
-		
-			//Class.forName("com.mysql.jdbc.Driver").newInstance();
-			
-//			conectionCON = DriverManager.getConnection("jdbc:mysql://localhost/webShopXXL2?" +
-//                     "user=root");
-
 			Class.forName("org.apache.derby.jdbc.ClientDriver");
 			conectionCON = DriverManager.getConnection("jdbc:derby://localhost:1527/webshopXXL; create=true");
-
-			System.out.println("  -> Datenbank gefunden");
-			
 		} catch (ClassNotFoundException e2) {
 			System.out.println("    Error --> SQL  CLASS : " + "  " + e2.toString());
 		} catch (SQLException e) {
 			System.out.println("    Error --> SQL  SQLException : " + "  " + e.toString());
 		} 
-//		catch (InstantiationException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (IllegalAccessException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		
-		System.out.println("\n-------------------------------\n");
 	}
 	
 	/***
@@ -71,8 +50,12 @@ public class DataBase {
 	 * @param readSQL
 	 * @return
 	 */
-	public ResultSet getResult(String readSQL){
+	public ResultSet getResult(String readSQL, boolean print){
 
+		if(print){
+			System.out.println("\n  ->  Database : getResult : 78 : SQL : " + readSQL);
+		}
+		
 		ResultSet resultSet = null;
 
 		try {

@@ -4,22 +4,29 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
     version="2.2">
-
-     <managed-bean>
-		<managed-bean-name>loginBean</managed-bean-name>
-		<managed-bean-class>com.pinhost.app.webshopxxl2.beans.LoginBean</managed-bean-class>
-		<managed-bean-scope>request</managed-bean-scope>
-	</managed-bean>
-	
-     <managed-bean>
-		<managed-bean-name>userBean</managed-bean-name>
-		<managed-bean-class>com.pinhost.app.webshopxxl2.beans.UserBean</managed-bean-class>
-		<managed-bean-scope>session</managed-bean-scope>
-	</managed-bean>
+     
+	<locale-config>
+      	<default-locale>de</default-locale>
+      	<supported-locale>en</supported-locale>
+    </locale-config>
+    
+    <resource-bundle>
+    	<base-name>com.pinhost.app.webshopxxl2.resources.message</base-name>
+      	<var>msg</var>
+    </resource-bundle>
+     
+     
+	<!--  Beans Package : com.pinhost.app.webshopXXl2.dataBeans  -->
 
 	<managed-bean>
 		<managed-bean-name>sessionBean</managed-bean-name>
 		<managed-bean-class>com.pinhost.app.webshopxxl2.beans.SessionBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>accountBean</managed-bean-name>
+		<managed-bean-class>com.pinhost.app.webshopxxl2.beans.AccountBean</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 
@@ -34,30 +41,44 @@
 		<managed-bean-class>com.pinhost.app.webshopxxl2.beans.NavigationBean</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
-	
+
 	<managed-bean>
-		<managed-bean-name>categorieListBean</managed-bean-name>
-		<managed-bean-class>com.pinhost.app.webshopxxl2.beans.CategorieListBean</managed-bean-class>
+		<managed-bean-name>artikelListBean</managed-bean-name>
+		<managed-bean-class>com.pinhost.app.webshopxxl2.beans.ArtikelListBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	
+	<!--  Data Beans Package : com.pinhost.app.webshopXXl2.dataBeans  -->
+
+	<managed-bean>
+		<managed-bean-name>loginBean</managed-bean-name>
+		<managed-bean-class>com.pinhost.app.webshopxxl2.dataBeans.LoginBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	
+     <managed-bean>
+		<managed-bean-name>costumerBean</managed-bean-name>
+		<managed-bean-class>com.pinhost.app.webshopxxl2.dataBeans.CostumerBean</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 
 	<managed-bean>
-		<managed-bean-name>categorieBean</managed-bean-name>
-		<managed-bean-class>com.pinhost.app.webshopxxl2.beans.CategorieBean</managed-bean-class>
+		<managed-bean-name>artikelTypeBean</managed-bean-name>
+		<managed-bean-class>com.pinhost.app.webshopxxl2.dataBeans.ArtikelTypBean</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
-
+	
 	<managed-bean>
-		<managed-bean-name>productListBean</managed-bean-name>
-		<managed-bean-class>com.pinhost.app.webshopxxl2.beans.ProductListBean</managed-bean-class>
+		<managed-bean-name>warehouseBean</managed-bean-name>
+		<managed-bean-class>com.pinhost.app.webshopxxl2.dataBeans.WarehouseBean</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
-
-	<managed-bean>
-		<managed-bean-name>productBean</managed-bean-name>
-		<managed-bean-class>com.pinhost.app.webshopxxl2.beans.ProductBean</managed-bean-class>
-		<managed-bean-scope>request</managed-bean-scope>
-	</managed-bean>
-
 	
+	<managed-bean>
+		<managed-bean-name>warehouseArtikelTypBean</managed-bean-name>
+		<managed-bean-class>com.pinhost.app.webshopxxl2.dataBeans.WarehouseArtikelTypBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	
+	 
 </faces-config>

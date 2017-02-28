@@ -7,15 +7,63 @@
 
 package com.pinhost.app.webshopxxl2.beans;
 
+import java.util.LinkedHashMap;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Map.Entry;
+
+import javax.faces.context.FacesContext;
+
+import com.pinhost.app.webshopxxl2.dataBeans.ArtikelTypBean;
+import com.pinhost.app.webshopxxl2.dataBeans.ArtikelTypGroupBean;
 
 public class SessionBean {
 
 	private boolean userIsOnline = false;  // after successful login is true
 	
-	private CategorieBean categorieBean;  // The actual Categorie
-	private ProductBean productBean;      // The actual Product
+	private ArtikelTypBean artikelTypBean;
+	private ArtikelTypGroupBean articelTypGroupBean;
+	
+	// Multi Language
+	private String currentLocale = Locale.GERMAN.toString();
+    private static Map<String, Locale> availableLocalesMap;
+
+    /***
+     * @author heiko
+     * <br> Init the SessionBean
+     * <br> Set Language
+     */
+	public SessionBean(){
+
+		availableLocalesMap = new LinkedHashMap<String, Locale>();
+		availableLocalesMap.put("Deutsch", Locale.GERMAN);
+		availableLocalesMap.put("English", Locale.ENGLISH);
+	}
+	
+	/***
+	 * @author heiko
+	 * @param newLocale
+	 */
+	public void setCurrentLocale(String newLocale){
+		
+		this.currentLocale = newLocale;
+	    
+		for (Entry<String, Locale> entry : availableLocalesMap.entrySet())
+	    {
+	      if (entry.getValue().toString().equals(newLocale))
+	        FacesContext.getCurrentInstance().getViewRoot().setLocale(entry.getValue());
+	    }
+	}
 	
 	/****  Getter and setter ****/
+	
+	public Map<String, Locale> getAvailableLocales(){
+	    return availableLocalesMap;
+	}
+	 
+	public String getCurrentLocale(){
+	    return currentLocale;
+	}
 	
 	public boolean isUserIsOnline() {
 		return userIsOnline;
@@ -24,19 +72,20 @@ public class SessionBean {
 		this.userIsOnline = userIsOnline;
 	}
 	
-	public CategorieBean getCategorieBean() {
-		return categorieBean;
+	/*** the Bean Getter and Setter ***********************/
+	
+	public ArtikelTypBean getArtikelTypBean() {
+		return artikelTypBean;
 	}
-	public void setCategorieBean(CategorieBean categorieBean) {
-		this.categorieBean = categorieBean;
+	public void setArtikelTypBean(ArtikelTypBean artikelTypBean) {
+		this.artikelTypBean = artikelTypBean;
 	}
 	
-	public ProductBean getProductBean() {
-		return productBean;
+	public ArtikelTypGroupBean getArticelTypGroupBean() {
+		return articelTypGroupBean;
 	}
-	public void setProductBean(ProductBean productBean) {
-		this.productBean = productBean;
+	public void setArticelTypGroupBean(ArtikelTypGroupBean articelTypGroupBean) {
+		this.articelTypGroupBean = articelTypGroupBean;
 	}
-
 	
 }

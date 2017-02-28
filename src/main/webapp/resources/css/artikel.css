@@ -1,0 +1,36 @@
+
+.artikel_main{
+	vertical-align: top;
+}
+	
+.artikel_categorie{
+	clear: both;
+	margin:10px; 
+	padding: 5px;
+}
+
+
+.artikel_group{
+	float: left;
+	border: 1px gray solid; 
+	margin:10px; 
+	padding: 5px;
+	border-radius: 5px;
+	width: 150px;
+	height: 150px;
+	position: relative;
+}
+
+.artikel_group_icon{
+	width: 120px;
+	height: 120px;
+}
+
+.artikel_font_artikelCategorie{
+	color: #888a85;
+	font-family: sans-serif;
+	font-style :italic;
+	font-size: 24px;
+	font-weight: bold;
+}
+

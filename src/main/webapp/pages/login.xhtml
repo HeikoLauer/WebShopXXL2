@@ -10,38 +10,40 @@
  
     
     <h:form id="form_loginpage">
-  			
-		<!-- START PANEL 2 -->
-		<div class="common_loginpanel_main">
+  		
+		<!-- START Loginpanel 2 -->
+		<div class="login_loginpanel_main">
 				
-			<div class="cus_loginpanel_header common_loginpanel_header">
+			<div class="cus_loginpanel_header login_loginpanel_header">
 				<p:outputLabel value="Bitte melden Sie sich an" />
 			</div>
 			
 			<!--  START LOGIN MASK -->		
-			<div class="common_loginpanel_inputpanel">
+			<div class="login_loginpanel_inputpanel">
 		
-		    	<div class="common_loginpanel_inputgroup">
+		    	<div class="login_loginpanel_inputgroup">
 	                              
-	               <p:graphicImage styleClass="common_loginpanel_inputicon" 
+	               <p:graphicImage styleClass="login_loginpanel_inputicon" 
 	               		value="/resources/images/common/login_user.png"/>
 	                           
 	        	   <p:inputText id="id_loginpage_loginname_input"
 							onchange="js_common_check_login()"
 							onblur="js_common_check_login()"
 							onkeypress="js_common_check_login()"
+							styleClass="common_color_white"
 							value="#{loginBean.loginName}" size="30" />
 	            </div>
 	                            
-	            <div class="common_loginpanel_inputgroup">
+	            <div class="login_loginpanel_inputgroup">
 	             	
-	             	<p:graphicImage styleClass="common_loginpanel_inputicon" 
+	             	<p:graphicImage styleClass="login_loginpanel_inputicon" 
 	               		value="/resources/images/common/login_password.png"/>
 	               
 					<p:password id="id_loginpage_password_input" 
 							onchange="js_common_check_login()"
 							onkeypress="js_common_check_login()"
-							onblur="js_common_check_login()"
+							onblur="js_comon_check_login()"
+							styleClass="common_color_white"
 							value="#{loginBean.password}" size="30" />
 	           	</div>
 				

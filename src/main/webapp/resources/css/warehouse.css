@@ -1,0 +1,59 @@
+
+ .warehouse_main{
+	display: table;
+	margin: 10px;
+	border: 1px gray solid;
+	padding:10px;
+	width: 99%
+}
+
+.warehouse_header_row{
+  	display: table-row;
+   	background-color: grey;
+  	height:20px;
+}
+
+.warehouse_header_row_border{
+	margin:10px 0px 5px 0px;	
+}
+
+.warehouse_header_cell{
+   	display: table-cell;
+}
+
+.warehouse_data_row{
+	display: table-row;
+}
+
+ .warehouse_data_row_border{
+  	border-bottom: 1px gray solid; 
+      padding:5px 0px 0px 5px;
+ }
+
+.warehouse_data_cell{
+	display: table-cell;
+}
+
+.warehouse_column60{width: 60px;}
+.warehouse_column150{width: 150px;}
+.warehouse_column300{width: 300px;}
+
+.warehouse_fontTitle{
+   font-size: 24px;
+   font-family: sans-serif;
+   font-weight: bold;
+}
+
+.warehouse_fontHeader{
+   font-size: 16px;
+   font-family: sans-serif;
+   font-weight: bold;
+}
+
+.warehouse_fontData{
+   font-size: 16px;
+   font-family: sans-serif;
+   font-weight: normal;
+}
+ 	
+ 	

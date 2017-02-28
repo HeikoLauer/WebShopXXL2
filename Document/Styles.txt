@@ -4,3 +4,32 @@ Background color: #5C9CCC
 Orange color: #F9B462
 Fontfarbe weiß color: #FCF8F8
 Hover color: #333
+
+
+<div class="container-fluid">
+          
+  <div>
+  
+    <div class="col-sm-7" style="background-color:yellow;">
+      aaaaa
+    </div>
+    
+    <div class="col-sm-5" style="background-color:pink; display : table">
+      
+        <div style="display: table-row;">
+        	
+             <div style="display: table-cell; border: 1px black solid; width:200px">
+            	<div>BBB 1</div>
+      			<div>BBB 2</div>
+      			<div>BBB 3</div>
+           	</div>
+            
+            <div style="display:table-cell; border: 1px black solid;">
+            	<div>Bcc 1</div>
+      			<div>cc2</div>
+      			
+           	</div>
+      	
+        
+      </div>
+    </div>

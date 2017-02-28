@@ -41,7 +41,8 @@ User -> Customer
 		
 	
 ArtikelTypCategory  ( Produkt-Gruppen )
-
+	
+	Long id
 	String name
 	List<ArtikelTypGroup> 	
 	

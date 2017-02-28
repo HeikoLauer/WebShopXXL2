@@ -1,0 +1,45 @@
+/** All CSS for account Panel **/
+
+.acountpanel_main_on{
+	display : table;
+	min-width: 300px;
+	width: 28%;	
+}
+
+.acountpanel_main_off{
+	display : none;	
+}
+
+.accountpanel_table{
+	display : table;
+	height: 20px;
+}
+
+.accountpanel_row{
+	display : table-row;
+}
+
+.accountpanel_column_label{
+	display : table-cell;
+	width: 130px;
+}
+
+.accountpanel_column_value{
+	display : table-cell;
+	width: 60px;
+	text-align: right;
+}
+
+.accountpanel_labelFont{
+	color: #555753;
+	font-family: sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.accountpanel_valueFont{
+	color: #555753;
+	font-family: sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+}

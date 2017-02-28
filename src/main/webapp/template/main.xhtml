@@ -14,6 +14,11 @@
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 		<link href="../resources/css/common.css" rel="stylesheet" type="text/css" />
 		<link href="../resources/css/menu.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/account.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/artikel.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/costum_account.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/warehouse.css" rel="stylesheet" type="text/css" />
+		<link href="../resources/css/login.css" rel="stylesheet" type="text/css" />
 		
 		<link href="../resources/css/mm.css" rel="stylesheet" type="text/css" />
 		 
@@ -32,14 +37,17 @@
 			<ui:include src="../template/header.xhtml" />
 		</div>
 		 
-		<div id="id_error_start" class="common_errorpanel_main">
-			<ui:include src="../template/error.xhtml" />
+		<div id="id_info_start" class="common_infopanel_main">
+			<ui:include src="../template/info.xhtml" />
 		</div>
 		
 		<div id="id_content_start" class="common_contentpanel_main">
 			<ui:include src="#{navigationBean.content_page}" />
 		</div>
 		
+		<div id="id_footer_start" class="common_footerpanel_main">
+			<ui:include src="../template/footer.xhtml" />
+		</div>
 		
 	</h:body>
 	

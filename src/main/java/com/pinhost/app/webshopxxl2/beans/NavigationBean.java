@@ -13,7 +13,7 @@ import com.pinhost.app.webshopxxl2.util.Util;
 
 public class NavigationBean extends Util
 {
-	
+	 
 	private String header_page = "../template/header.xhtml";
 	private String error_page = "../template/error.xhtml";
 	private String footer_page = "../template/footer.xhtml";
@@ -21,8 +21,11 @@ public class NavigationBean extends Util
 	
 	// Statics for the Content Pages
 	private String CONTENT_LOGIN_PAGE = "../pages/login.xhtml";
-	private String CONTENT_CATEGORIE_PAGE = "../pages/categorie.xhtml";
-	private String CONTENT_PRODUCT_PAGE = "../pages/product.xhtml";
+
+	private String CONTENT_ARTICELTYP_PAGE = "../pages/artikelTyp.xhtml";
+	private String CONTENT_ARTICELGROUP_PAGE = "../pages/artikelGroup.xhtml";
+	private String CONTENT_WAREHOUSE_PAGE = "../pages/warehouse.xhtml";
+	private String CONTENT_COSTUMER_ACCOUNT_PAGE = "../pages/costumer_account.xhtml";
 	
 	
 	public NavigationBean(){
@@ -66,12 +69,21 @@ public class NavigationBean extends Util
 	public String getCONTENT_LOGIN_PAGE() {
 		return CONTENT_LOGIN_PAGE;
 	}
-	public String getCONTENT_CATEGORIE_PAGE() {
-		return CONTENT_CATEGORIE_PAGE;
-	}
 	
-	public String getCONTENT_PRODUCT_PAGE() {
-		return CONTENT_PRODUCT_PAGE;
+	public String getCONTENT_ARTICELGROUP_PAGE() {
+		return CONTENT_ARTICELGROUP_PAGE;
+	}
+
+	public String getCONTENT_ARTICELTYP_PAGE() {
+		return CONTENT_ARTICELTYP_PAGE;
+	}
+
+	public String getCONTENT_WAREHOUSE_PAGE() {
+		return CONTENT_WAREHOUSE_PAGE;
+	}
+
+	public String getCONTENT_COSTUMER_ACCOUNT_PAGE() {
+		return CONTENT_COSTUMER_ACCOUNT_PAGE;
 	}
 	
 	/**
@@ -84,9 +96,9 @@ public class NavigationBean extends Util
 	public String getMenuBarClass(){
 		
 		if(getSessionBean().isUserIsOnline()){
-			return "topnav display_on";
+			return "display_on";
 		} else {
-			return "topnav display_off";
+			return "display_off";
 		}
 	}
 
@@ -97,7 +109,6 @@ public class NavigationBean extends Util
 	public boolean isShowLogoff(){
 		return getSessionBean().isUserIsOnline();
 	}
-	
 	
 	/******** Action Methods *************************************/
 	
@@ -120,7 +131,7 @@ public class NavigationBean extends Util
 	 */
 	public String logoff(){
 		
-		getUserBean().clearUser();
+		getCostumerBean().clearUser();
 		getSessionBean().setUserIsOnline(false);
  		setContent_page(getCONTENT_LOGIN_PAGE());
 		getMessageBean().setLoginStartState();

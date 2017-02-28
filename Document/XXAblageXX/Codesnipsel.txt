@@ -4,6 +4,12 @@ Faces ActionListener
 	<f:attribute name="newpage_login_wrong" value="../pages/categorie.xhtml" />
 
 	
-		//String login_ok  = (String) event.getComponent().getAttributes().get("newpage_login_ok");
-		//String login_wrong  = (String) event.getComponent().getAttributes().get("newpage_login_wrong");
- 		//System.out.println("\n\n CheckLogin " + login_ok + "\n\n");
+<h:form>
+          <span>#{msg.Change_language}</span>
+          <label class="select">
+            <h:selectOneMenu value="#{userSessionBean.currentLocale}" onchange="submit()">
+              <f:selectItems value="#{userSessionBean.availableLocales}" />
+            </h:selectOneMenu>
+            <i></i>
+          </label>
+</h:form>

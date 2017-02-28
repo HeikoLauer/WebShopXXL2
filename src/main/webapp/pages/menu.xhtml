@@ -14,21 +14,16 @@
 	  			<p:commandLink ajax="false" styleClass="active" value="Produktauswahl" 
 	  				action="#"
 	  				actionListener="#{navigationBean.switchContentPage}" >
-	  				<f:attribute name="content_page" value="#{navigationBean.CONTENT_CATEGORIE_PAGE}" />
-	  				
+	  				<f:attribute name="content_page" value="#{navigationBean.CONTENT_ARTICELGROUP_PAGE}" />
 	  			</p:commandLink>	
 	  		</li>
 
-	  		<li>
-	  			<p:commandLink  value="Produktsuche" action="#"  />
-	  		</li>
-
-	  		<li>
-	  			<p:commandLink  value="Produktaktivierung" action="#"  />
-	  		</li>
-			
 			<li>
-	  			<p:commandLink  value="Mein Konto" action="#"  />
+	  			<p:commandLink ajax="false" styleClass="active" value="Mein Konto" 
+	  				action="#"
+	  				actionListener="#{navigationBean.switchContentPage}" >
+	  				<f:attribute name="content_page" value="#{navigationBean.CONTENT_COSTUMER_ACCOUNT_PAGE}" />
+	  			</p:commandLink>	
 	  		</li>
 			
 			<!--  Logoff Button -->
@@ -46,18 +41,6 @@
 					
 			</li>
 	  		
-	  		<li class="right">
-				
-				<h:commandLink  action="#">
-					<h:graphicImage id="id_headerpage_warenkorb_img"
-						rendered="#{navigationBean.showLogoff}" 
-						height="30" width="30"
-						style="margin-top: -6px"
-						value="../resources/images/common/warenkorb.png" />
-				
-				</h:commandLink>
-			</li>
-			
 		</menu>
 		
 	</h:form>

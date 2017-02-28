@@ -9,8 +9,8 @@ package com.pinhost.app.webshopxxl2.beans;
 
 import com.pinhost.app.webshopxxl2.util.MeldungenUtil;
 
-public class MessageBean {
-
+public class MessageBean extends MeldungenUtil {
+ 
 	private String messageText;
 	private String messageCSS;
 
@@ -47,8 +47,8 @@ public class MessageBean {
 		setMessageCSS(MeldungenUtil.getCss_LoginDialog());
 	}
 	
-	public void setLoginCorrectState(String name, String nachname){
-		setMessageText(MeldungenUtil.getText_Correct_Login() + " : " + name + " " + nachname);
+	public void setLoginCorrectState(String name){
+		setMessageText(MeldungenUtil.getText_Correct_Login() + " : " + name);
 		setMessageCSS(MeldungenUtil.getCss_Correct_Login());
 	}
 

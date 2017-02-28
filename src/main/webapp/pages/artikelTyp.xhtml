@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"	
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+ 
+    
+    <h:form id="form_artikeltyppage">
+  			
+		<!--  Begin outer div for ArticelTypKategorie -->
+		<div class="artikel_main">		
+		
+			<!-- Begin outer Div     -->
+			<div class="artikel_categorie">
+				
+				<!--  Begin inner Loop for ArticelTypGroup -->
+				<ui:repeat var="artikelTyp" 
+	   	  	  		       value="#{artikelListBean.artikelTypBean}" 
+	   	 			 	   varstatus="status"> 
+					
+					<!--  Begin DIV Artikelgroup  -->
+					<div class="artikel_group" style="text-align: center;">
+									
+ 						<p:graphicImage styleClass="artikel_group_icon" 
+							value="../resources/dummyDaten/CategorieBilder/#{artikelTypCategorie.image}" />
+							
+						<div style="text-align: center;">
+							<p:outputLabel value="#{artikelTypGroup.name}" /></div>
+				
+					</div> <!-- End DIV Artikelgroup  -->
+
+				</ui:repeat> <!--  Begin inner Loop for ArticelTypGroup -->
+					
+			</div> <!-- End Row DIV surround the Artikel Group Row -->	
+			
+		</div> <!-- End Outer Div     -->					
+					
+    </h:form>
+
+</html>

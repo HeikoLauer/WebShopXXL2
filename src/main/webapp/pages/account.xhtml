@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"	
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+ 
+    <h:form id="form_accountpanel">
+    	
+    	<!--  Start of the Account Widget  -->
+	  	<div class="#{accountBean.accountCSSMain}">
+	  	 	
+	  	 	<div style="display: table-row;">
+	  	 	
+	  	 		<!--  start Cell 1 for Info Text for Costumer -->
+		  	 	<div style="display: table-cell;">
+		  	 		
+		  	 		<!-- Row in a Table Cell -->	
+		  	 		<div class="accountpanel_table">
+		  	 			<div class="accountpanel_row">
+				  	 		<div class="accountpanel_column_label">
+				  	 			<p:outputLabel styleClass="accountpanel_labelFont" 
+				  	 				value="Anzahl der Produkte" />
+				  	 		</div>	
+				  	 		<div class="accountpanel_column_value">	
+				  	 			<p:outputLabel styleClass="accountpanel_valueFont" 
+				  	 				value="#{warehouseBean.productCounter}"/>
+				  	 		</div>
+			  	 		</div>
+		  	 		</div>
+		  	 	
+		  	 		<!-- Row in a Table Cell -->	
+		  	 		<div class="accountpanel_table">
+		  	 			<div class="accountpanel_row">
+				  	 		<div class="accountpanel_column_label">
+				  	 			<p:outputLabel styleClass="accountpanel_labelFont" 
+				  	 			  value="Gesamtsumme :" />
+				  	 		</div>	
+				  	 		<div class="accountpanel_column_value">	
+				  	 			<p:outputLabel styleClass="accountpanel_valueFont" 
+				  	 				value="#{warehouseBean.total_value} €"/>
+				  	 		</div>
+			  	 		</div>
+		  	 		</div>
+		  	 	
+		  	 		<!-- Row in a Table Cell -->	
+		  	 		<div class="accountpanel_table">
+		  	 			<div class="accountpanel_row">
+				  	 		<div class="accountpanel_column_label">
+				  	 			<p:outputLabel styleClass="accountpanel_labelFont" 
+				  	 				value="Ihr Guthaben :" />
+				  	 		</div>	
+				  	 		<div class="accountpanel_column_value">	
+				  	 			<p:outputLabel styleClass="accountpanel_valueFont" 
+				  	 				value="#{warehouseBean.leftAccount} €"/>
+				  	 		</div>
+			  	 		</div>
+		  	 		</div>
+		  	  	
+		  		</div> <!-- End Cell 1 for Info Text for Costumer -->
+		  		
+		  		<!--  start Cell 2 for Icon Warenkorb -->
+		  		<div style="display: 
+		  			table-cell; 
+		  			width:120px; 
+		  			vertical-align: middle; text-align: center;">
+		  			
+			  		<p:commandLink ajax="false" 
+			  			actionListener="#{navigationBean.switchContentPage}" action="#" >
+			  			<f:attribute name="content_page" value="../pages/warehouse.xhtml" />
+						<h:graphicImage id="id_headerpage_warenkorb_img"
+							height="60" width="60"
+							value="../resources/images/common/warenkorb.png" />
+							
+					</p:commandLink>
+					
+				</div> <!--  end Cell 2 for Icon Warenkorb -->
+				
+	  		</div>
+	  		
+	  	</div> <!-- End of the Account Widget  -->
+	  	
+    </h:form>
+		
+</html>

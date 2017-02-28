@@ -1,0 +1,76 @@
+/** All CSS for account Panel **/
+
+
+.co_accountpanel_widgetmain {
+   float: left;
+    width: 45%;
+    min-width : 450px;
+    margin: 10px;
+}
+
+.co_accountpanel_widget{
+	display : table;
+   	border: 1px #6c6b75 solid;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;	
+    width: 98%;
+}
+
+.co_accountpanel_widgetheader_outline{
+	display : table-row;
+}
+	
+.co_accountpanel_widgetheader{
+    display: table-cell;
+    background: gray;
+    height: 30px;
+    text-align: center;
+    border: 1px #6c6b75 solid;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.co_accountpanel_widgetcontent_outline{
+	display : table-row;
+}
+
+.co_accountpanel_widgetcontent{
+	display : table-cell;
+	background : white;
+	padding : 10px;
+}
+
+.co_accountpanel_content_table{
+	display :table;
+	width: 100%;
+}
+
+.co_accountpanel_content_row{
+	display :table-row;
+	height: 25px;
+}
+
+.co_accountpanel_content_label{
+	display: table-cell;
+	width: 120px;
+}
+
+.co_accountpanel_content_value{
+	display: table-cell;
+	width: 200px;
+}
+
+.co_accountpanel_content_label_font{
+	font-family: sans-serif;
+	font-size: 12px;
+	font-style: italic;
+	color : #2e3436;		
+}	
+
+.co_accountpanel_content_value_font{
+	font-family: sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color : #2e3436;		
+}	
