@@ -1,10 +1,12 @@
-/****************************************************/
-/* @Author 		: heiko lauer                       */
-/* @Date        : 2017.02.16                        */
-/* @Last Change : 2017.02.22                        */
-/* @Description : Bean for the Costumer             */
-/* @Scope		: Session                           */            
-/****************************************************/
+/*************************************************************/
+/* @Author 		: heiko lauer                                */
+/* @Date        : 2017.02.16                                 */
+/* @Last Change : 2017.02.22                                 */
+/* @Description : Bean for the Costumer                      */
+/* @Scope		: Session                                    */  
+/* xhtml        : pages/login.xhtml                          */
+/*                pages/costumer_accout_widgets/*            */
+/*************************************************************/
 
 package com.pinhost.app.webshopxxl2.dataBeans;
 

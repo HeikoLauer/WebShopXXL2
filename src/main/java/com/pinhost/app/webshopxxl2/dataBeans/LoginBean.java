@@ -1,9 +1,10 @@
-/****************************************************/
-/* @Author 		: heiko lauer                       */
-/* @Date        : 2017.02.16                        */
-/* @Description : Bean for Login Page               */
-/* @Scope		: Request                           */            
-/****************************************************/
+/*************************************************************/
+/* @Author 		: heiko lauer                                */
+/* @Date        : 2017.02.16                                 */
+/* @Description : Bean for Login Page                        */
+/* @Scope		: Request                                    */
+/* xhtml        : pages/login.xht                            */
+/*************************************************************/
 
 package com.pinhost.app.webshopxxl2.dataBeans;
 

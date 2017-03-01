@@ -1,10 +1,11 @@
-/*********************************************************/
-/* @Author 		: heiko lauer                            */
-/* @Date        : 2017.02.16                             */
-/* @Last Change : 2017.02.22                             */
-/* @Description : Bean for the ArticelTypeCategorieListe */
-/* @Scope		: Session                                */
-/*********************************************************/
+/******************************************************************/
+/* @Author 		: heiko lauer                                     */
+/* @Date        : 2017.02.16                                      */
+/* @Last Change : 2017.03.01                                      */
+/* @Description : Bean for the ArticelTypeCategorieListe          */
+/* @Scope		: Session                                         */
+/* xhtml        : pages/artikelGroup.xhtml                        */
+/******************************************************************/
 
 package com.pinhost.app.webshopxxl2.beans;
 
@@ -43,7 +44,8 @@ public class ArtikelListBean extends Util {
 		if (articelTypCategorieList == null) {
 			articelTypCategorieList = ArtikelFacade.getAllArticelTypCategorieBean();
 
-			// Read all ArtikelTypGroups
+			// Read all ArtikelTypGroups in depended the articelTypCategorie
+			// and store that in a List
 			for (ArtikelTypCategorieBean bean : articelTypCategorieList) {
 				bean.setArtikelTypGroupList(ArtikelFacade.getAllArticelTypGroupBean(bean.getId()));
 			}
@@ -51,7 +53,11 @@ public class ArtikelListBean extends Util {
 	}
 
 	/***
-	 * @author heiko <br>
+	 * @author heiko
+	 *  
+	 * <br> Return a List of ArtikelTypKategorie
+	 * <br> If the List = null, than perform init
+	 * 
 	 * @return List<ArticelTypKategorieBean>
 	 */
 	public List<ArtikelTypCategorieBean> getAllArticelTypKategorieBean() {
