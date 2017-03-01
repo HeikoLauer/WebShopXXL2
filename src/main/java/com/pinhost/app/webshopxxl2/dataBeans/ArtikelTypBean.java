@@ -1,9 +1,12 @@
-/****************************************************/
-/* @Author 		: heiko lauer                       */
-/* @Date        : 2017.02.16                        */
-/* @Description : Bean for a Product                */
-/* @Scope		: Request                           */            
-/****************************************************/
+/******************************************************************/
+/* @Author 		: heiko lauer                                     */
+/* @Date        : 2017.02.16                                      */
+/* @LastDate    : 2017.03.01                                      */
+/* @Description : Bean for a ArtikelTyp                           */
+/* @Scope		: Request                                         */            
+/* xhtml        : pages/artikelTyp.xhtml, pages/account.xhtml     */
+/*                pages/warehouse.xhtml                           */
+/******************************************************************/
 
 package com.pinhost.app.webshopxxl2.dataBeans;
 

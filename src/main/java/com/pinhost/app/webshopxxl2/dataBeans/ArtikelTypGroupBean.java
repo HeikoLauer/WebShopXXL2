@@ -1,13 +1,14 @@
 /*********************************************************************/
 /* @Author 		: heiko lauer                                        */
 /* @Date        : 2017.02.16                                         */
-/* @Last Change : 2017.02.22                                         */
+/* @Last Change : 2017.03.01                                         */
 /* @Description : Bean for the ArticelTypeGroup                      */
 /*                For this exist no own ListBean, the List of this   */
 /*                Bean are read and stored from ArtikelFacade        */
 /*                The List of this Bean is Part of the               */
 /*                ArtikelTypCategorieBean                            */
-/* @Scope		: Request                                            */            
+/* @Scope		: Request                                            */   
+/* xhtml        : pages/artikelGroup.xhtml                           */
 /*********************************************************************/
 
 package com.pinhost.app.webshopxxl2.dataBeans;

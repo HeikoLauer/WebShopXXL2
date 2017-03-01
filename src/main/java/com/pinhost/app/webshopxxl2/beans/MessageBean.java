@@ -1,9 +1,11 @@
-/****************************************************/
-/* @Author 		: heiko lauer                       */
-/* @Date        : 2017.02.10                        */
-/* @Description : Bean for Messages                 */
-/* @Scope		: Request                           */            
-/****************************************************/
+/******************************************************************/
+/* @Author 		: heiko lauer                                     */
+/* @Date        : 2017.02.10                                      */
+/* @LastDate    : 2017.03.01                                      */
+/* @Description : Bean for Messages                               */
+/* @Scope		: Request                                         */
+/* xhtml        : pages/message.xhtml                             */
+/******************************************************************/
 
 package com.pinhost.app.webshopxxl2.beans;
 

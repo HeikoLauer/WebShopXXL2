@@ -1,9 +1,10 @@
 /***************************************************************/
 /* @Author 		: heiko lauer                                  */
 /* @Date        : 2017.02.24                                   */
-/* @LastChange  : 2017.02.24                                   */
+/* @LastChange  : 2017.03.01                                   */
 /* @Description : Bean for Warehouse Page                      */
-/* @Scope		: Session                                      */            
+/* @Scope		: Session                                      */ 
+/* xhtml        : warehouse.xhtml                              */
 /***************************************************************/
 
 package com.pinhost.app.webshopxxl2.dataBeans;
@@ -34,8 +35,11 @@ public class WarehouseBean extends Util {
 	
 	/***
 	 * @author heiko
+	 * <br> calculate the totalValue for all ArtikelTyp in the warehouse
+	 * <br> therefore get the artikelCounter and the Value of the ArtikelTyp
+	 * <br> multiplie the both value and add this to the totalValue
 	 * 
-	 * @return
+	 * @return the result
 	 */
 	public String getTotalValueAllArtikelTyp(){
 		Long retValue=0L;
@@ -47,8 +51,11 @@ public class WarehouseBean extends Util {
 	
 	/***
 	 * @author heiko
+	 * <br> calculate the total count for all ArtikelTyp in the warehouse
+	 * <br> therefore get the artikelCounter the ArtikelTyp
+	 * <br> and add this to the totalValue
 	 * 
-	 * @return
+	 * @return the result
 	 */
 	public String getTotalAllArtikelTyp(){
 		Integer retValue=0;
@@ -63,6 +70,10 @@ public class WarehouseBean extends Util {
 	
 	/**
 	 * @author heiko
+	 * 
+	 * <br> get a parameter ( ArtikelBean ) from the xhtml Page
+	 * <br> add this Bean in the List
+	 * 
 	 * @param event
 	 */
 	public void addNewArtikelTypBean(ActionEvent event){

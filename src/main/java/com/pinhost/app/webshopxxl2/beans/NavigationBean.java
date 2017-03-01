@@ -1,9 +1,11 @@
-/****************************************************/
-/* @Author 		: heiko lauer                       */
-/* @Date        : 2017.02.16                        */
-/* @Description : Bean for the Navigation           */
-/* @Scope		: Session                           */            
-/****************************************************/
+/******************************************************************/
+/* @Author 		: heiko lauer                                     */
+/* @Date        : 2017.02.16                                      */
+/* @LastDate    : 2017.03.01                                      */
+/* @Description : Bean for the Navigation                         */
+/* @Scope		: Session                                         */   
+/* xhtml        : pages/artikelGroup.xhtml                        */
+/******************************************************************/
 
 package com.pinhost.app.webshopxxl2.beans;
 
@@ -13,7 +15,8 @@ import com.pinhost.app.webshopxxl2.util.Util;
 
 public class NavigationBean extends Util
 {
-	 
+	
+	/** Static String for each Page **********************/
 	private String header_page = "../template/header.xhtml";
 	private String error_page = "../template/error.xhtml";
 	private String footer_page = "../template/footer.xhtml";
@@ -22,12 +25,18 @@ public class NavigationBean extends Util
 	// Statics for the Content Pages
 	private String CONTENT_LOGIN_PAGE = "../pages/login.xhtml";
 
+	/** Static Strings for each CONTENT Page  ***************/
 	private String CONTENT_ARTICELTYP_PAGE = "../pages/artikelTyp.xhtml";
 	private String CONTENT_ARTICELGROUP_PAGE = "../pages/artikelGroup.xhtml";
 	private String CONTENT_WAREHOUSE_PAGE = "../pages/warehouse.xhtml";
 	private String CONTENT_COSTUMER_ACCOUNT_PAGE = "../pages/costumer_account.xhtml";
 	
-	
+	/***
+	 * @author heiko
+	 * 
+	 * <br> Init the Navigation 
+	 * <br> and set the Login Page as actual Content Page
+	 */
 	public NavigationBean(){
 		content_page = CONTENT_LOGIN_PAGE;
 	}
@@ -64,7 +73,7 @@ public class NavigationBean extends Util
 		this.footer_page = footer_page;
 	}
 	
-	/*** Getter for the Content Pages *************/
+	/*** Getter for the set Content Pages *************/
 	
 	public String getCONTENT_LOGIN_PAGE() {
 		return CONTENT_LOGIN_PAGE;
@@ -114,6 +123,9 @@ public class NavigationBean extends Util
 	
 	/***
 	 * @author heiko
+	 * <br> set the actual Content Page
+	 * <br> from the differented xhtml pages comes a parameter
+	 * <br> the Value of the Paraneter ist the Name of the next content Page
 	 * @param ActionEvent
 	 */
 	public void switchContentPage(ActionEvent event){

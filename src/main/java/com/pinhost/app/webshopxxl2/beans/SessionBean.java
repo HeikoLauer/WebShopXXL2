@@ -1,9 +1,11 @@
-/****************************************************/
-/* @Author 		: heiko lauer                       */
-/* @Date        : 2017.02.16                        */
-/* @Description : Bean for the Session Data         */
-/* @Scope		: Session                           */            
-/****************************************************/
+/*****************************************************************/
+/* @Author 		: heiko lauer                                    */
+/* @Date        : 2017.02.16                                     */
+/* @LastDate    : 2017.03.01                                     */
+/* @Description : Bean for the Session Data                      */
+/* @Scope		: Session                                        */  
+/* xhtml        : none                                           */
+/*****************************************************************/
 
 package com.pinhost.app.webshopxxl2.beans;
 

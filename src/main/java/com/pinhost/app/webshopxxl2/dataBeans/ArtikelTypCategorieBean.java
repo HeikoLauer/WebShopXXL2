@@ -1,10 +1,11 @@
-/****************************************************/
-/* @Author 		: heiko lauer                       */
-/* @Date        : 2017.02.16                        */
-/* @Last Change : 2017.02.22                        */
-/* @Description : Bean for the ArticelTypeCategorie */
-/* @Scope		: Session                           */            
-/****************************************************/
+/*****************************************************************/
+/* @Author 		: heiko lauer                                    */
+/* @Date        : 2017.02.16                                     */
+/* @Last Change : 2017.03.01                                     */
+/* @Description : Bean for the ArticelTypeCategorie              */
+/* @Scope		: Session                                        */
+/* xhtml        : artikelGroup.xhtml                             */
+/*****************************************************************/
 
 
 package com.pinhost.app.webshopxxl2.dataBeans;
@@ -54,6 +55,5 @@ public class ArtikelTypCategorieBean {
 	public void setArtikelTypGroupList(List<ArtikelTypGroupBean> artikelTypGroupList) {
 		this.artikelTypGroupList = artikelTypGroupList;
 	}
-	
 	
 }
