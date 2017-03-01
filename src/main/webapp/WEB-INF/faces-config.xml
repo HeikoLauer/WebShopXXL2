@@ -2,20 +2,24 @@
 <faces-config
     xmlns="http://xmlns.jcp.org/xml/ns/javaee"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
     version="2.2">
-     
-	<locale-config>
-      	<default-locale>de</default-locale>
-      	<supported-locale>en</supported-locale>
-    </locale-config>
     
-    <resource-bundle>
-    	<base-name>com.pinhost.app.webshopxxl2.resources.message</base-name>
-      	<var>msg</var>
-    </resource-bundle>
-     
-     
+    <application>
+
+		<locale-config>
+	      	<default-locale>de</default-locale>
+	      	<supported-locale>en</supported-locale>
+	    </locale-config>
+	    
+	    <resource-bundle>
+	    	<base-name>com.pinhost.app.webshopxxl2.resources.message</base-name>
+	      	<var>msg</var>
+	    </resource-bundle>
+	     
+    </application>
+	
+	     
 	<!--  Beans Package : com.pinhost.app.webshopXXl2.dataBeans  -->
 
 	<managed-bean>
@@ -73,6 +77,5 @@
 		<managed-bean-class>com.pinhost.app.webshopxxl2.dataBeans.WarehouseBean</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
-	
-	 
+
 </faces-config>

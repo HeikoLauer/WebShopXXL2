@@ -3,3 +3,4 @@ derby-db/
 .settings/
 .classpath
 *.class
+.metadata/
