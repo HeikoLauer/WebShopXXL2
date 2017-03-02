@@ -36,6 +36,7 @@ public class Util {
     }
 	
 	/*** Getter for the ManagedBeans **********************/
+	/** Each Mangedbean in the Faces Config have to get here a Getter ********/
 	
 	public static NavigationBean getNavigationBean() { return (NavigationBean) getBean("navigationBean"); }
 	public static SessionBean getSessionBean() { return (SessionBean) getBean("sessionBean"); }

@@ -1,9 +1,9 @@
-/****************************************************/
-/* @Author 		: heiko lauer                       */
-/* @Date        : 2017.02.10                        */
-/* @Description : DAO for User                      */
-/* @Scope		: No Bean                           */            
-/****************************************************/
+/***************************************************************/
+/* @Author 		: heiko lauer                                  */
+/* @Date        : 2017.02.10                                   */
+/* @Description : DAO for User                                 */
+/* @Scope		: No Bean is a Facade                          */            
+/***************************************************************/
 
 package com.pinhost.app.webshopxxl2.facade;
 
@@ -19,10 +19,13 @@ public class CostumerFacade extends Util {
 	/**
 	 * @author heiko
 	 * 
-	 * <br> Get a UserTO from UserDAO with the given loginname and password
+	 * <br> Request a CostumerTO from CostumerDAO 
+	 * <br> with the given loginname and password
+	 * <br> Transfer the TO to a CostumerBean
 	 * 
 	 * @param name
 	 * @param password
+	 * 
 	 * @return UserTO
 	 */
 	public static boolean getUserForLogin(String loginname, String password){

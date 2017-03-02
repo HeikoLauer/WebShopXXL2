@@ -1,9 +1,9 @@
 /*******************************************************************/
-/* @Author : heiko lauer */
-/* @Date : 2017.02.16 */
-/* @Last Change : 2017.02.22 */
-/* @Description : Facade for all Artikel Data */
-/* ArtikelTypCategorie, ArtikelTypGroup, ArtikelTyp */
+/* @Author 		: heiko lauer                                      */
+/* @Date        : 2017.02.16                                       */
+/* @Last Change : 2017.03.02                                       */
+/* @Description : Facade for all Artikel Data                      */
+/*                ArtikelTypCategorie, ArtikelTypGroup, ArtikelTyp */
 /*******************************************************************/
 
 package com.pinhost.app.webshopxxl2.facade;
@@ -19,98 +19,99 @@ import com.pinhost.common.webshopxxl2.to.ArticelTypTO;
 import com.pinhost.common.webshopxxl2.to.ArtikelTypCategorieTO;
 import com.pinhost.common.webshopxxl2.to.ArtikelTypGroupTO;
 
-public class ArtikelFacade
-{
+public class ArtikelFacade {
 
 	/****
 	 * @author heiko
+	 * 
+	 * <br> request all ArtikelTypCategorieTO from Backend
+	 * <br> transfer the TO Obejcs to Bean Objects
 	 *
-	 * @return
+	 * @return List of ArtikelTypCategorieBean
 	 */
-	public static List<ArtikelTypCategorieBean> getAllArticelTypCategorieBean()
-	{
-
-		// get a List of CategorieTO
+	public static List<ArtikelTypCategorieBean> getAllArticelTypCategorieBean(){
+		
+		// request a List of ArtikelTypCategorieTO
 		List<ArtikelTypCategorieTO> readList = new DBArtikelConnect().readAllArticelTypCategorie();
-
-		// Create a List of CategorieBean
+		
+		// Create a List of ArtikelTypCategorieBean
 		List<ArtikelTypCategorieBean> retList = new ArrayList<ArtikelTypCategorieBean>();
 		ArtikelTypCategorieBean writeBean;
-
-		// Transfer the Properties
-		int i = 0; // Index for the List
-		for (ArtikelTypCategorieTO readTO : readList)
-		{
-
+		
+		// Transfer the Properties from TO to Bean
+		int i=0; // Index for the List
+		for(ArtikelTypCategorieTO readTO : readList){
+			
 			writeBean = new ArtikelTypCategorieBean();
 			writeBean.setIndex(i);
 			writeBean.setId(readTO.getId());
 			writeBean.setName(readTO.getName());
 			writeBean.setImage(readTO.getImage());
-
+			
 			i++;
-
+			
 			retList.add(writeBean);
 		}
-
+		
 		return retList;
 	}
 
+
 	/****
-	 * @author heiko <br>
-	 *         Get all ArtikelTypCategorieBean from DBConnect
+	 * @author heiko
 	 * 
-	 * @param none
+	 * <br> request all ArtikelTypGroupTO from Backend
+	 * <br> transfer the TO Objects to Bean Objects
+	 *
+	 * @param long artikelTypCategorie_id
 	 * @return List of ArtikelTypCategorieBean
 	 */
-	public static List<ArtikelTypGroupBean> getAllArticelTypGroupBean(long artikelTypCategorie_id)
-	{
-
-		// get a List of ArtikelTypGroupTO
+	public static List<ArtikelTypGroupBean> getAllArticelTypGroupBean(long artikelTypCategorie_id){
+		
+		// request a List of ArtikelTypGroupTO
 		List<ArtikelTypGroupTO> readList = new DBArtikelConnect().readAllArticelTypGroupForId(artikelTypCategorie_id);
-
+		
 		// Create a List of ArtikelTypGroupBean
 		List<ArtikelTypGroupBean> retList = new ArrayList<ArtikelTypGroupBean>();
 		ArtikelTypGroupBean writeBean;
-
+		
 		// Transfer the Properties
-		int i = 0; // Index for the List
-		for (ArtikelTypGroupTO readTO : readList)
-		{
-
+		int i=0; // Index for the List
+		for(ArtikelTypGroupTO readTO : readList){
+			
 			writeBean = new ArtikelTypGroupBean();
 			writeBean.setIndex(i);
 			writeBean.setId(readTO.getId());
 			writeBean.setName(readTO.getName());
 			i++;
-
+			
 			retList.add(writeBean);
 		}
-
+		
 		return retList;
 	}
 
-	/**
-	 * @author heiko <br>
-	 *         get a List of ArtikelTypTO from the Backend <br>
-	 *         get all ArtikelTypTO for the given artikelGroup_id <br>
-	 *         convert the ArtikelTO to a to a ArtikelTypBean
-	 * @return List of ArtikelTypTO
+	/****
+	 * @author heiko
+	 * 
+	 * <br> request all ArtikelTypTO from Backend
+	 * <br> transfer the TO Objects to Bean Objects
+	 *
+	 * @param long artikelGroup_id
+	 * @return List of ArtikelTypCategorieBean
 	 */
-	public static List<ArtikelTypBean> getAllArtikelTypBean(long artikelGroup_id)
-	{
-
+	public static List<ArtikelTypBean> getAllArtikelTypBean(long artikelGroup_id){
+	
 		// get a List of CategorieTO
 		List<ArticelTypTO> readList = new DBArtikelConnect().readAllArtikelTypForArtikelGroup(artikelGroup_id);
-
+		
 		// Create a List of CategorieBean
 		List<ArtikelTypBean> retList = new ArrayList<ArtikelTypBean>();
 		ArtikelTypBean artikelTypBean;
-
+		
 		// Transfer the Properties
-		for (ArticelTypTO artikelTypTO : readList)
-		{
-
+		for(ArticelTypTO artikelTypTO : readList){
+			
 			artikelTypBean = new ArtikelTypBean();
 
 			artikelTypBean.setId(artikelTypTO.getId());
@@ -122,11 +123,11 @@ public class ArtikelFacade
 			artikelTypBean.setQuantity(artikelTypTO.getQuantity());
 			artikelTypBean.setTotalValue(artikelTypTO.getTotalValue());
 			artikelTypBean.setValue(artikelTypTO.getValue());
-
+			
 			retList.add(artikelTypBean);
 		}
-
+		
 		return retList;
 	}
-
+	
 }

@@ -1,9 +1,10 @@
-/****************************************************/
-/* @Author 		: heiko lauer                       */
-/* @Date        : 2017.02.10                        */
-/* @Description : Util for Messages                 */
-/* @Scope		: No Bean                           */            
-/****************************************************/
+/*****************************************************************/
+/* @Author 		: heiko lauer                                    */
+/* @Date        : 2017.02.10                                     */
+/* @LastChange  : 2017.03.02                                     */
+/* @Description : Util for Messages                              */
+/* @Scope		: No Bean                                        */            
+/*****************************************************************/
 
 package com.pinhost.app.webshopxxl2.util;
 
