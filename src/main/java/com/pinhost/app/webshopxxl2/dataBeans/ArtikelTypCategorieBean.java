@@ -17,7 +17,7 @@ public class ArtikelTypCategorieBean {
 	private int index;
 	private Long id;
 	private String name;
-	private String image;
+	
 	
 	private List<ArtikelTypGroupBean> artikelTypGroupList;
 	
@@ -42,12 +42,7 @@ public class ArtikelTypCategorieBean {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getImage() {
-		return image;
-	}
-	public void setImage(String image) {
-		this.image = image;
-	}
+	
 	
 	public List<ArtikelTypGroupBean> getArtikelTypGroupList() {
 		return artikelTypGroupList;

@@ -62,17 +62,23 @@ public class MessageBean extends MeldungenUtil {
 	
 	public void setLoginStartState(){
 		setMessageText(MeldungenUtil.getText_LoginDialog());
-		setMessageCSS(MeldungenUtil.getCss_LoginDialog());
+		setMessageCSS(MeldungenUtil.getCss_Message());
 	}
 	
 	public void setLoginCorrectState(String name){
 		setMessageText(MeldungenUtil.getText_Correct_Login() + " : " + name);
-		setMessageCSS(MeldungenUtil.getCss_Correct_Login());
+		setMessageCSS(MeldungenUtil.getCss_Message());
 	}
 
 	public void setLoginWrongState(){
 		setMessageText(MeldungenUtil.getText_WrongLoginDialog());
-		setMessageCSS(MeldungenUtil.getCss_WrongLoginDialog());
+		setMessageCSS(MeldungenUtil.getCss_Error());
+	}
+	
+	public void setCustomerUnknown(String customer){
+		String msg = "Der Benutzer - " + customer + " - ist dem System nicht bekannt!";
+		setMessageText(msg);
+		setMessageCSS(MeldungenUtil.getCss_Warning());
 	}
 
 }

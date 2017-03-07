@@ -46,8 +46,7 @@ public class ArtikelFacade {
 			writeBean.setIndex(i);
 			writeBean.setId(readTO.getId());
 			writeBean.setName(readTO.getName());
-			writeBean.setImage(readTO.getImage());
-			
+					
 			i++;
 			
 			retList.add(writeBean);
@@ -85,6 +84,12 @@ public class ArtikelFacade {
 			writeBean.setId(readTO.getId());
 			writeBean.setArtikelTypCategorie_id(artikelTypCategorie_id);
 			writeBean.setName(readTO.getName());
+			
+			writeBean.setImage(readTO.getImage());
+			
+			writeBean.setDirectLoad(readTO.isDirectLoad());
+			writeBean.setPinprinting(readTO.isPinprinting());
+			writeBean.setPaymentCard(readTO.isPaymentCard());
 			
 			i++;
 			

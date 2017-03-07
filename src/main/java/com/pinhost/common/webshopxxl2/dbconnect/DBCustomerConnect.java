@@ -5,9 +5,9 @@ import java.sql.SQLException;
 
 import com.pinhost.common.webshopxxl2.to.CostumerTO;
 
-public class DBCostumerConnect extends DataBase{
+public class DBCustomerConnect extends DataBase{
 	
-	public static String TABLE = "costumer";
+	public static String TABLE = "customer";
 	
 	/*** Table Columns *******************/
 	public static String loginname = "loginname";
@@ -38,7 +38,33 @@ public class DBCostumerConnect extends DataBase{
 	public static  String fi_contact_mobil = "fi_contact_mobil";
 	public static  String fi_contact_mail = "fi_contact_mail";
 	public static  String fi_contact_position = "fi_contact_position"; 
-	
+
+	/***
+	 * @author heiko
+	 * <br> Check Login Name uis exist in DB
+	 * @param loginname_in
+	 * @return
+	 */
+	public boolean isCustomerExist(String loginname_in) {
+
+		try {
+
+			String readSQl = "SELECT * FROM " + TABLE +" WHERE " 
+					+ loginname + " = '" + loginname_in 
+					+ "'";
+			
+			ResultSet res = getResult(readSQl, true);
+		
+			if(res.next()){
+				return true;
+			}
+			
+		}catch (SQLException e) {
+				System.out.println("\n\n ----------------------------------------------------"
+						+ "\n  DBCustomerConnect 58 : isCustomerExist : " + e.toString());
+		}
+		return false;
+	}
 	/***
 	 * @author heiko
 	 * @param username
@@ -53,8 +79,6 @@ public class DBCostumerConnect extends DataBase{
 			String readSQl = "SELECT * FROM " + TABLE +" WHERE " 
 					+ loginname + " = '" + loginname_in 
 					+ "' AND " + password + " = '" + password_in + "'";
-			
-			System.out.println("\n\n DBUserConnect : 57 : Read : " + readSQl);
 			
 			ResultSet res = getResult(readSQl, true);
 		

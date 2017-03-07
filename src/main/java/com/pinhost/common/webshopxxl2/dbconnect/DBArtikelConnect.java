@@ -40,6 +40,9 @@ public class DBArtikelConnect extends DataBase{
 
 	public static String PRICE_VALUE = "price_value"; 
 
+	public static String ISPAYMENTCARD = "ispaymentcard";
+	public static String ISPINPRINT = "ispinprint";
+	public static String ISDIRECTLOAD = "isdirectload";
 	
 	/***
 	 * @author heiko
@@ -66,8 +69,7 @@ public class DBArtikelConnect extends DataBase{
 				
 				articelTypKategorieTO.setId(res.getLong(ID));
 				articelTypKategorieTO.setName(res.getString(NAME));
-				articelTypKategorieTO.setImage(res.getString(IMAGE));
-			
+							
 				retList.add(articelTypKategorieTO);
 			}
 		
@@ -110,6 +112,11 @@ public class DBArtikelConnect extends DataBase{
 				articelTypGroupTO.setId(res.getLong(ID));
 				articelTypGroupTO.setArtikelTypCategorie_id(artikelTypCategorie_id);
 				articelTypGroupTO.setName(res.getString(NAME));
+				articelTypGroupTO.setImage(res.getString(IMAGE));
+				articelTypGroupTO.setDirectLoad(res.getBoolean(ISDIRECTLOAD));
+				articelTypGroupTO.setPinprinting(res.getBoolean(ISPINPRINT));
+				articelTypGroupTO.setPaymentCard(res.getBoolean(ISPAYMENTCARD));
+				
 				retList.add(articelTypGroupTO);
 			}
 		

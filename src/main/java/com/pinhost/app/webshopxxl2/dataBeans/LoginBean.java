@@ -8,7 +8,7 @@
 
 package com.pinhost.app.webshopxxl2.dataBeans;
 
-import com.pinhost.app.webshopxxl2.facade.CostumerFacade;
+import com.pinhost.app.webshopxxl2.facade.CustomerFacade;
 import com.pinhost.app.webshopxxl2.util.Util;
 
 public class LoginBean extends Util{
@@ -54,17 +54,24 @@ public class LoginBean extends Util{
 	 */
 	public String login(){
 		
-		// TODO Custiomer Startseite eintragen
-		
-		if(CostumerFacade.getUserForLogin(loginName, password)){
+		// Check if the User is Exist in DB
+		if(CustomerFacade.isCustomerExist(loginName)){
+			
+			// Check Userlogin and Password Ok
+			if(CustomerFacade.getUserForLogin(loginName, password)){
 
-			getWarehouseBean().resetWarehouse();
+				getWarehouseBean().resetWarehouse();
 
-			getSessionBean().setUserIsOnline(true);
-			getNavigationBean().setContent_page(getNavigationBean().getCONTENT_ARTICELGROUP_PAGE());
-			getMessageBean().setLoginCorrectState(getCostumerBean().getFi_contact_name());
-		} else {
-			getMessageBean().setLoginWrongState();
+				getSessionBean().setUserIsOnline(true);
+				getNavigationBean().setContent_page(getNavigationBean().getCONTENT_ARTICELGROUP_PAGE());
+				getMessageBean().setLoginCorrectState(getCostumerBean().getFi_contact_name());
+			
+			} else {
+				getMessageBean().setLoginWrongState();
+			}
+			
+		} else{
+			getMessageBean().setCustomerUnknown(loginName);
 		}
 		
 		return "#";

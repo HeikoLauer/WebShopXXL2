@@ -1,41 +1,36 @@
 /** Costumer **/
-DELETE FROM app.COSTUMER;
-INSERT INTO app.COSTUMER VALUES   
-	(10000,'heiko','lauer',1000, 100, 'Filiale Lauer', 'Strasse Lauer', '100', '11111', 'Ort Lauer', '1111 11 111', '1111 11 22', '+49 111 111 111', 'lauer@test.de', 'Pos1', 'Herr', 'Heiko Lauer', 'Street 1', '11', '11111', 'Place 1', '12345', '6789', '+49 123 4567', 'heiko@test.de', 'POS2'),
-	(10001,'verena','milz',2000, 200, 'Filiale Milz', 'Strasse Milz', '200', '22222', 'Ort Milz', '2222 22 222', '2222 22 33', '+49 222 222 222', 'milz@test.de', 'Pos2', 'Frau', 'Verena Milz', 'Street 2', '22', '22222', 'Place 2', '12345', '6789', '+49 123 4567', 'verena@test.de', 'POS2'),
-	(10002,'daniel','knauth',3000, 300, 'Filiale Knauth', 'Strasse Knauth', '200', '22222', 'Ort Knauth', '2222 222 222', '333 333 333', '+49 333 333 333', 'knauth@test.de', 'Pos3', 'Herr', 'Daniel Knauth', 'Street 3', '33', '33333', 'Place 3', '435676', '6789', '+49 123 4567', 'daniel@test.de', 'POS2');
+DELETE FROM app.CUSTOMER;
+INSERT INTO app.CUSTOMER VALUES   
+	(10000,'heiko','lauer',100, 0, 'Filiale Lauer', 'Strasse Lauer', '100', '11111', 'Ort Lauer', '1111 11 111', '1111 11 22', '+49 111 111 111', 'lauer@test.de', 'Pos1', 'Herr', 'Heiko Lauer', 'Street 1', '11', '11111', 'Place 1', '12345', '6789', '+49 123 4567', 'heiko@test.de', 'POS2'),
+	(10001,'verena','milz',200, 1, 'Filiale Milz', 'Strasse Milz', '200', '22222', 'Ort Milz', '2222 22 222', '2222 22 33', '+49 222 222 222', 'milz@test.de', 'Pos2', 'Frau', 'Verena Milz', 'Street 2', '22', '22222', 'Place 2', '12345', '6789', '+49 123 4567', 'verena@test.de', 'POS2'),
+	(10002,'daniel','knauth',150, 0, 'Filiale Knauth', 'Strasse Knauth', '200', '22222', 'Ort Knauth', '2222 222 222', '333 333 333', '+49 333 333 333', 'knauth@test.de', 'Pos3', 'Herr', 'Daniel Knauth', 'Street 3', '33', '33333', 'Place 3', '435676', '6789', '+49 123 4567', 'daniel@test.de', 'POS2');
 
     
     
 /** ArtikelTypCategorie **/    
 
 DELETE FROM app.artikeltypcategorie;
-INSERT INTO app.artikeltypcategorie VALUES(10000, 'Artikel Art Kategorie 1', 'art_typ1_cat1.png');
-INSERT INTO app.artikeltypcategorie VALUES(20000, 'Artikel Art Kategorie 2', 'art_typ1_cat2.png');
-INSERT INTO app.artikeltypcategorie VALUES(30000, 'Artikel Art Kategorie 3', 'art_typ1_cat3.png');
+INSERT INTO app.artikeltypcategorie VALUES(10000, 'Kategorie Payment Cards');
+INSERT INTO app.artikeltypcategorie VALUES(20000, 'Kategorie Pin Printing');
+INSERT INTO app.artikeltypcategorie VALUES(30000, 'Kategorie Direktaufladen');
 
 
 DELETE FROM app.artikeltypgroup; 	
 INSERT INTO app.artikeltypgroup VALUES  
- 	(11000, 10000, 'Artikel Typ 1 Cat 1'),
- 	(11001, 10000, 'Artikel Typ 2 Cat 1'),
- 	(11002, 10000, 'Artikel Typ 3 Cat 1'),
- 	(11003, 10000, 'Artikel Typ 4 Cat 1'),
+ 	(11000, 10000, 1,0,0,'Payment Cards Telekom', 'telekom.png'),
+ 	(11001, 10000, 1,0,0,'Payment Cards 1 & 1', '1und1.png'),
+ 	(11002, 10000, 1,0,0,'Payment Cards Mobilcom', 'mobilcom.png'),
+ 	(11003, 10000, 1,0,0,'Payment Cards Vodaphone', 'vodaphone.jpg'),
  	
- 	(12000, 20000, 'Artikel Typ 1 Cat 2'),
- 	(12001, 20000, 'Artikel Typ 2 Cat 2'),
- 	(12002, 20000, 'Artikel Typ 3 Cat 2'),
- 	(12003, 20000, 'Artikel Typ 4 Cat 2'),
- 	(12004, 20000, 'Artikel Typ 5 Cat 2'),
-	(12005, 20000, 'Artikel Typ 5 Cat 2'),
-	(12006, 20000, 'Artikel Typ 5 Cat 2'),
-	(12007, 20000, 'Artikel Typ 5 Cat 2'),
-
- 	(13000, 30000, 'Artikel Typ 1 Cat 3'),
- 	(13001, 30000, 'Artikel Typ 2 Cat 3'),
- 	(13002, 30000, 'Artikel Typ 3 Cat 3');
+ 	(12000, 20000, 0,1,0,'Pin Printing Telekom', 'telekom.png'),
+ 	(12001, 20000, 0,1,0,'Pin Printing 1 & 1', '1und1.png'),
+ 	(12002, 20000, 0,1,0,'Pin Printing Mobilcom', 'mobilcom.png'),
+ 	(12003, 20000, 0,1,0,'Pin Printing Vodaphone', 'vodaphone.jpg'),
  	
- 	
+ 	(13000, 30000, 0,0,1,'Direktaufladen Telekom', 'telekom.png'),
+ 	(13001, 30000, 0,0,1,'Direktaufladen 1 & 1', '1und1.png'),
+ 	(13002, 30000, 0,0,1,'Direktaufladen Mobilcom', 'mobilcom.png'),
+ 	(13003, 30000, 0,0,1,'Direktaufladen Vodaphone', 'vodaphone.jpg');
  	
  	
 delete from  app.artikelTyp;

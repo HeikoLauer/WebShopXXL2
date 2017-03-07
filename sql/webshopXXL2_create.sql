@@ -1,14 +1,13 @@
 
 /*** Costumer **********************/
-DROP  TABLE app.costumer;
-CREATE TABLE app.costumer (
-  	
-	id bigint,  
+DROP  TABLE app.customer;
+CREATE TABLE app.customer (
+  	id bigint,  
   	loginname varchar(25),
   	password varchar(25),
   	creditLimit bigint,
-  	reachedCreditLimit bigint,
-  
+  	password_expired int, 
+  	
    	filial_Name varchar(25),
    	filial_street varchar(25),
    	filial_number varchar(5),
@@ -38,8 +37,7 @@ CREATE TABLE app.costumer (
 DROP TABLE app.artikelTypCategorie;	
 CREATE TABLE app.artikelTypCategorie(
 	id bigint,
-	name varchar(25),
-	image varchar(25));
+	name varchar(25));
 
 /*** ArtikelTypCategory **********/
 	
@@ -47,7 +45,11 @@ DROP TABLE app.artikelTypGroup;
 CREATE TABLE app.artikelTypGroup(
 	id bigint,
 	artikeltypcategorie_id bigint,
-	name varchar(25));
+	isPaymentCard int,
+	isPinPrint int,
+	isDirectLoad int,
+	name varchar(25),
+	image varchar(25));
 	
 /*** ArtikelTyp ******************/	
 DROP TABLE app.artikelTyp;	

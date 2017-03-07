@@ -25,7 +25,7 @@ public class DataBase {
 
 		try{
 			Class.forName("org.apache.derby.jdbc.ClientDriver");
-			conectionCON = DriverManager.getConnection("jdbc:derby://localhost:1527/webshopXXL; create=true");
+			conectionCON = DriverManager.getConnection("jdbc:derby://localhost:1527/webshopXXL");
 		} catch (ClassNotFoundException e2) {
 			System.out.println("    Error --> SQL  CLASS : " + "  " + e2.toString());
 		} catch (SQLException e) {

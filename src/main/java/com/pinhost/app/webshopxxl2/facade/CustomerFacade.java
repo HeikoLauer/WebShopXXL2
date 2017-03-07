@@ -9,12 +9,21 @@ package com.pinhost.app.webshopxxl2.facade;
 
 
 import com.pinhost.app.webshopxxl2.util.Util;
-import com.pinhost.common.webshopxxl2.dbconnect.DBCostumerConnect;
+import com.pinhost.common.webshopxxl2.dbconnect.DBCustomerConnect;
 import com.pinhost.common.webshopxxl2.to.CostumerTO;
 
 
-public class CostumerFacade extends Util {
+public class CustomerFacade extends Util {
 	
+	/***
+	 * @author heiko
+	 * <br> Is the Customer exist
+	 * @param loginname
+	 * @return
+	 */
+	public static boolean isCustomerExist(String loginname) {
+		return new DBCustomerConnect().isCustomerExist(loginname);
+	}
 	
 	/**
 	 * @author heiko
@@ -29,9 +38,9 @@ public class CostumerFacade extends Util {
 	 * @return UserTO
 	 */
 	public static boolean getUserForLogin(String loginname, String password){
-
-		CostumerTO userTO = new DBCostumerConnect().readCostumerForLogin(loginname, password);
 		
+		CostumerTO userTO = new DBCustomerConnect().readCostumerForLogin(loginname, password);
+			
 		if(userTO != null){
 			getCostumerBean().setUser(userTO);
 			return true;

@@ -151,7 +151,7 @@ public class NavigationBean extends Util
 	public String logoff(){
 	
 		getWarehouseBean().resetWarehouse();
-
+		
 		getCostumerBean().clearUser();
 		getSessionBean().setUserIsOnline(false);
  		setContent_page(getCONTENT_LOGIN_PAGE());
