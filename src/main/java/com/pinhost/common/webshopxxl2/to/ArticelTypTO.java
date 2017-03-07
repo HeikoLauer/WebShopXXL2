@@ -8,8 +8,7 @@ public class ArticelTypTO {
 	private String image;
 	private Long value;
 	private Long maxQuantity;
-	private Long quantity;
-	private Long totalValue;
+	
 	private String currency;
 	
 	/**** Getter and Setter   *****************/
@@ -52,18 +51,7 @@ public class ArticelTypTO {
 	public void setMaxQuantity(Long maxQuantity) {
 		this.maxQuantity = maxQuantity;
 	}
-	public Long getQuantity() {
-		return quantity;
-	}
-	public void setQuantity(Long quantity) {
-		this.quantity = quantity;
-	}
-	public Long getTotalValue() {
-		return totalValue;
-	}
-	public void setTotalValue(Long totalValue) {
-		this.totalValue = totalValue;
-	}
+	
 	public String getCurrency() {
 		return currency;
 	}

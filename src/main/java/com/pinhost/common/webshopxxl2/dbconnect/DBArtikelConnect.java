@@ -37,10 +37,10 @@ public class DBArtikelConnect extends DataBase{
 
 	public static String CURRENCY = "currency"; 
 	public static String MAXQUANTITY = "maxquantity"; 
-	public static String QUANTITY = "quantity"; 
-	public static String TOTALVALUE = "totalvalue"; 
-	public static String VALUE = "value"; 
 
+	public static String PRICE_VALUE = "price_value"; 
+
+	
 	/***
 	 * @author heiko
 	 * <br> Read all ArtikelTypCategorieTO from Database
@@ -121,6 +121,10 @@ public class DBArtikelConnect extends DataBase{
 		return retList;
 	}
 		
+
+
+
+		
 	/***
 	 * @author heiko
 	 * <br> Read all ArtikelTypTO from Database
@@ -151,16 +155,14 @@ public class DBArtikelConnect extends DataBase{
 				artikelTypTO.setImage(res.getString(IMAGE));
 				artikelTypTO.setMaxQuantity(res.getLong(MAXQUANTITY));
 				artikelTypTO.setName(res.getString(NAME));
-				artikelTypTO.setQuantity(res.getLong(QUANTITY));
-				artikelTypTO.setTotalValue(res.getLong(TOTALVALUE));
-				artikelTypTO.setValue(res.getLong(VALUE));
+				artikelTypTO.setValue(res.getLong(PRICE_VALUE));
 				
 				retList.add(artikelTypTO);
 			}
 		
 		} catch (SQLException e) {
 			System.out.println("\n\n ----------------------------------------------------"
-					+ "\n  DBProductConnect 55 : readAllProductsForCategorie : " + e.toString());
+					+ "\n  DBArtikelConnect 55 : readAllProductsForCategorie : " + e.toString());
 		}
 		
 		return retList;

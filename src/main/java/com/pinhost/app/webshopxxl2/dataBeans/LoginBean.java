@@ -54,7 +54,12 @@ public class LoginBean extends Util{
 	 */
 	public String login(){
 		
+		// TODO Custiomer Startseite eintragen
+		
 		if(CostumerFacade.getUserForLogin(loginName, password)){
+
+			getWarehouseBean().resetWarehouse();
+
 			getSessionBean().setUserIsOnline(true);
 			getNavigationBean().setContent_page(getNavigationBean().getCONTENT_ARTICELGROUP_PAGE());
 			getMessageBean().setLoginCorrectState(getCostumerBean().getFi_contact_name());

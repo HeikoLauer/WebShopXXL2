@@ -31,6 +31,8 @@ public class NavigationBean extends Util
 	private String CONTENT_WAREHOUSE_PAGE = "../pages/warehouse.xhtml";
 	private String CONTENT_COSTUMER_ACCOUNT_PAGE = "../pages/costumer_account.xhtml";
 	
+	private String CONTENT_CUSTOMER_INVALID_PAGE = "../pages/subPages/customer_invalid.xhtml";
+	
 	/***
 	 * @author heiko
 	 * 
@@ -95,6 +97,11 @@ public class NavigationBean extends Util
 		return CONTENT_COSTUMER_ACCOUNT_PAGE;
 	}
 	
+	public String getCONTENT_CUSTOMER_INVALID_PAGE() {
+		return CONTENT_CUSTOMER_INVALID_PAGE;
+	}
+	
+	
 	/**
 	 * @author heiko
 	 * <br> get the User login state from SessionBean
@@ -142,7 +149,9 @@ public class NavigationBean extends Util
 	 * <br>
 	 */
 	public String logoff(){
-		
+	
+		getWarehouseBean().resetWarehouse();
+
 		getCostumerBean().clearUser();
 		getSessionBean().setUserIsOnline(false);
  		setContent_page(getCONTENT_LOGIN_PAGE());

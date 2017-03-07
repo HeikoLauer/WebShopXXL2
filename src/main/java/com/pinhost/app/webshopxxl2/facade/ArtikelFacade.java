@@ -80,9 +80,12 @@ public class ArtikelFacade {
 		for(ArtikelTypGroupTO readTO : readList){
 			
 			writeBean = new ArtikelTypGroupBean();
+			
 			writeBean.setIndex(i);
 			writeBean.setId(readTO.getId());
+			writeBean.setArtikelTypCategorie_id(artikelTypCategorie_id);
 			writeBean.setName(readTO.getName());
+			
 			i++;
 			
 			retList.add(writeBean);
@@ -100,34 +103,40 @@ public class ArtikelFacade {
 	 * @param long artikelGroup_id
 	 * @return List of ArtikelTypCategorieBean
 	 */
-	public static List<ArtikelTypBean> getAllArtikelTypBean(long artikelGroup_id){
+	public static List<ArtikelTypBean> getAllArtikelTypBean(long artikelGroup_id, long artikelCategorie_id){
 	
 		// get a List of CategorieTO
 		List<ArticelTypTO> readList = new DBArtikelConnect().readAllArtikelTypForArtikelGroup(artikelGroup_id);
-		
+
 		// Create a List of CategorieBean
 		List<ArtikelTypBean> retList = new ArrayList<ArtikelTypBean>();
 		ArtikelTypBean artikelTypBean;
 		
 		// Transfer the Properties
+		int i=0;
 		for(ArticelTypTO artikelTypTO : readList){
 			
 			artikelTypBean = new ArtikelTypBean();
 
+			artikelTypBean.setIndex(i);
 			artikelTypBean.setId(artikelTypTO.getId());
-			artikelTypBean.setCurrency(artikelTypTO.getCurrency());
 			artikelTypBean.setArtikelGroup_id(artikelGroup_id);
+			artikelTypBean.setArtikelCategorie_id(artikelCategorie_id);
+						
+			artikelTypBean.setCurrency(artikelTypTO.getCurrency());
+			
 			artikelTypBean.setImage(artikelTypTO.getImage());
 			artikelTypBean.setMaxQuantity(artikelTypTO.getMaxQuantity());
 			artikelTypBean.setName(artikelTypTO.getName());
-			artikelTypBean.setQuantity(artikelTypTO.getQuantity());
-			artikelTypBean.setTotalValue(artikelTypTO.getTotalValue());
 			artikelTypBean.setValue(artikelTypTO.getValue());
+
+			i++;
 			
 			retList.add(artikelTypBean);
 		}
 		
 		return retList;
 	}
-	
+
+
 }

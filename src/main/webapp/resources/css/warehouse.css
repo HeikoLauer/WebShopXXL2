@@ -1,3 +1,57 @@
+<<<<<<< HEAD
+.warehouse_fontTitle{
+	font-size: 24px;
+	color : #2e3436;
+	margin: 0px 0px 10px 20px;
+}
+
+ .warehouse_main{
+	width: 99%;
+	height: 30px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	margin: 1px 0px 5px 5px;	
+}
+
+.warehouse_header{
+	font-size: 16px;
+	font-family: sans-serif;
+	font-weight: bold;
+	border: 1px gray solid;
+	text-align: center;
+	color: white;
+}
+	
+.warehouse_col_artikel{
+	text-align: left;
+	padding-left: 10px;
+}
+
+.warehouse_col_value{
+	text-align: right;
+	width: 120px;
+	padding-right: 10px;
+}
+.warehouse_col_maxQuantity{
+	text-align: center;
+	width: 80px;
+}
+.warehouse_col_quantity{
+	text-align: center;
+	width: 80px;
+}
+.warehouse_col_button{
+	text-align: center;
+	width: 80px;
+}
+.warehouse_col_totalValue{
+	text-align: right;
+	width: 120px;
+	padding-right: 10px;
+}
+
+
+=======
 
  .warehouse_main{
 	display: table;
@@ -60,4 +114,5 @@
    font-weight: normal;
 }
  	
+>>>>>>> branch 'master' of https://github.com/HeikoLauer/WebShopXXL2.git
  	

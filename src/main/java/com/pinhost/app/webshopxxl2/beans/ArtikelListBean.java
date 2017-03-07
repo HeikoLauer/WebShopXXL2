@@ -65,7 +65,7 @@ public class ArtikelListBean extends Util {
 		if (articelTypCategorieList == null) {
 			init();
 		}	
-		
+		 
 		return articelTypCategorieList;
 	}
 
@@ -80,9 +80,8 @@ public class ArtikelListBean extends Util {
 	 * @return List<ArtikelTypBean>
 	 */
 	public List<ArtikelTypBean> getArtikelTypBean() {
-		return ArtikelFacade.getAllArtikelTypBean(actualArtikelGroupBean.getId());
+		return ArtikelFacade.getAllArtikelTypBean(actualArtikelGroupBean.getId(), actualArtikelGroupBean.getArtikelTypCategorie_id());
 	}
-
 /*************************************************************************************/
 /* Action Methods                                                                    */
 /*************************************************************************************/

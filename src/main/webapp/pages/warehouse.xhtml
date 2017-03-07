@@ -9,93 +9,103 @@
 	xmlns:h="http://java.sun.com/jsf/html">
  
     <h:form id="form_warehousepanel">
-    	
-   		<!--  Start Table Warehouse  -->
- 		<div class="warehouse_main">
-    		
-    		<p:outputLabel styleClass="warehouse_fontTitle" value="Warehouse" /> 
-    	
-  			<!--    Start Warehouse Header  -->	
- 			<div class="warehouse_header_row common_color_colerd">
-			
-   				<div class="warehouse_header_cell warehouse_column300" >
-      				<span class="warehouse_fontHeader">Artikel</span>
-   				</div>
 
-				<div class="warehouse_header_cell warehouse_column150" >
-      				<span class="warehouse_fontHeader">Preis</span>
-   				</div>
-			
-				<div class="warehouse_header_cell warehouse_column60" >
-      				<span class="warehouse_fontHeader">Anzahl</span>
-   				</div>
+    		
+    	<div class="warehouse_fontTitle" >	
+   			<p:outputLabel value="Warehouse" /> 
+   		</div>
+   		
+   		<div style="margin: 5px;">	
+   			<h:commandButton value="Senden"
+   					action="#" 
+   					actionListener="#{warehouseBean.sendWarehouse}"/> 
+   		</div>
+   		
+   		<h:dataTable rendered="#{warehouseBean.warehouseHasArtikel}" 
+   					 value="#{warehouseBean.allWarehouseArtikelTypBeans}" 
+   					 var="warehouse_typbean"  
+   					 styleClass="warehouse_main"
+   					 headerClass ="warehouse_header common_color_colerd"
+   					 columnClasses="warehouse_col_button,
+   					 				warehouse_col_artikel,
+   					                warehouse_col_value,
+   					                warehouse_col_quantity,
+   					                warehouse_col_button,
+   					                warehouse_col_totalValue,
+   					                warehouse_col_button">
+   			
+   			<h:column style="width: 60px">
+   				<f:facet name="header"><h:outputLabel value=" " /></f:facet>
+   				  <h:graphicImage id="id_warehouse_artikel_img"
+					height="40" width="40"
+					value="../resources/dummyDaten/CategorieBilder/#{warehouse_typbean.artikelTypBean.image}" />
 				
-				<div class="warehouse_header_cell warehouse_column60" >
-      				<span class="warehouse_fontHeader"> </span>
-   				</div>
-		
-				<div class="warehouse_header_cell warehouse_column150" >
-      				<span class="warehouse_fontHeader">Summe</span>
-   				</div>
-			
-			</div> <!-- End Warehouse Header -->
- 
-  			<!-- Start Iterate -->	
-  			<ui:repeat var="warehouse_typbean" 
-  						value="#{warehouseBean.allWarehouseArtikelTypBeans}" 
-  						varstatus="status">
-		
-				<!--    Start Warehouse Data Row -->
-  				<div class="warehouse_data_row">
-	
-	    			<div class="warehouse_data_row_border">
-	    				
-	    				<div class="warehouse_data_cell warehouse_column300" >
-	      					<p:outputLabel styleClass="warehouse_fontData" 
-	      						value="#{warehouse_typbean.artikelTypBean.name}" />
-	    				</div>
-	
-						<div class="warehouse_data_cell warehouse_column150" >
-	      					<p:outputLabel styleClass="warehouse_fontData" 
-	      						value="#{warehouse_typbean.artikelTypBean.value} €" />
-	    				</div>
-	
-						<div class="warehouse_data_cell warehouse_column60" >
-	      					<p:outputLabel styleClass="warehouse_fontData" 
-	      						value="#{warehouse_typbean.artikelTypBean.artikelCounter}" />
-	    				</div>
-	    				
-	    				<div class="warehouse_data_cell warehouse_column60" >
-	      					<div>
-		      					<p:commandLink ajax="false" action="#" actionListener="#{warehouseBean.incrementArtikelTyp}">
-			      					<h:graphicImage id="id_warehouse_add_img"
-									height="20" width="20"
-									value="../resources/images/common/add.png" />
-									<f:attribute name="artikeltyp_index" value="#{warehouse_typbean.artikelTypBean}" />
-								</p:commandLink>
-							</div>
-							<div>
-		    					<p:commandLink ajax="false" action="#" actionListener="#{warehouseBean.decrementArtikelTyp}">
-			      					<h:graphicImage id="id_warehouse_remove_img"
-									height="20" width="20"
-									value="../resources/images/common/remove.png" />
-									<f:attribute name="artikeltyp_index" value="#{warehouse_typbean.artikelTypBean}" />
-								</p:commandLink>
-							</div>
-	    				</div>
-	
-	    				<div class="warehouse_data_cell warehouse_column150" >
-	      					<p:outputLabel styleClass="warehouse_fontData" value="#{warehouse_typbean.artikelTypBean.totalValue} €" />
-	    				</div>
-	    				
+   			</h:column>			
+   			
+   			<h:column>
+   				<f:facet name="header"><h:outputLabel value="Artikel" /></f:facet>
+   				<h:outputLabel value="#{warehouse_typbean.artikelTypBean.name}" />
+   			</h:column>	
+   			
+   			<h:column style="width:150px; text-align:right;" >
+   				<f:facet name="header"><h:outputLabel value="Preis" /></f:facet>
+   				<h:outputLabel value="#{warehouse_typbean.artikelTypBean.value} €" />
+   			</h:column>	
+   			
+   			<h:column  style="width:150px; text-align:center;" >
+   				<f:facet name="header"><h:outputLabel value="Anzahl" /></f:facet>
+   				
+   				<h:outputLabel  value="#{warehouse_typbean.artikelTypBean.artikelCounter} / #{warehouse_typbean.artikelTypBean.maxQuantity}" />
+   				   				
+   			</h:column>			
+   		
+   			<h:column style="width:150px; text-align:center;">
+   				<f:facet name="header"><h:outputLabel value="" /></f:facet>
+   					<div>
+      					<p:commandLink ajax="false" action="#" actionListener="#{warehouseBean.incrementArtikelTyp}">
+      						<f:attribute name="artikeltyp_index" value="#{warehouse_typbean.artikelTypBean}" />
+	      					
+	      					<h:graphicImage id="id_warehouse_add_img"
+								height="20" width="20"
+								value="../resources/images/common/add.png" />
+						</p:commandLink>
 					</div>
-					
-	 			</div> <!-- End Warehouse Data Row -->
-			
-			</ui:repeat> <!-- Start Iterate -->	
- 		
-		</div> <!--  End Warehouse Table  -->		
-	
+					<div>
+    					<p:commandLink ajax="false" action="#" actionListener="#{warehouseBean.decrementArtikelTyp}">
+    						<f:attribute name="artikeltyp_index" value="#{warehouse_typbean.artikelTypBean}" />
+	      					
+	      					<h:graphicImage id="id_warehouse_remove_img"
+								height="20" width="20"
+								value="../resources/images/common/remove.png" />
+						</p:commandLink>
+					</div>
+    		</h:column>	
+   			
+   			<h:column style="width: 120px">
+   				<f:facet name="header"><h:outputLabel value="Gesamtpreis" /></f:facet>
+   				<div style="text-align: right">
+   					<h:outputLabel value="#{warehouse_typbean.artikelTypBean.totalValue} €" />
+   				</div>
+   			</h:column>	
+   			
+   			<h:column style="width: 120px">
+   				<f:facet name="header"><h:outputLabel value=" " /></f:facet>
+   				<p:commandLink ajax="false" action="#" actionListener="#{warehouseBean.removeArtikelTyp}">
+  						<f:attribute name="artikeltyp_index" value="#{warehouse_typbean.artikelTypBean}" />
+     					
+     					<h:graphicImage id="id_warehouse_removeall_img"
+						height="30" width="30"
+						value="../resources/images/common/trash.png" />
+				</p:commandLink>
+   			</h:column>	
+   			
+   		</h:dataTable>
+   		
+   		<p:panel rendered="#{!warehouseBean.warehouseHasArtikel}" >
+   			<p:outputLabel value="Keine Artikel im Warenkorb" />
+   		</p:panel>
+    	 
+
 	</h:form>
 		
 </html>

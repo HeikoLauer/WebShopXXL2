@@ -3,19 +3,24 @@
 /* @Date        : 2017.02.10                                      */
 /* @LastDate    : 2017.03.01                                      */
 /* @Description : Bean for Messages                               */
+/* @Scope		: Session                                         */
 /* @Scope		: Request                                         */
 /* xhtml        : pages/message.xhtml                             */
 /******************************************************************/
 
 package com.pinhost.app.webshopxxl2.beans;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.pinhost.app.webshopxxl2.util.MeldungenUtil;
 
 public class MessageBean extends MeldungenUtil {
  
-	private String messageText;
 	private String messageCSS;
-
+	private List<String> messageList = new ArrayList<String>();
+	private List<String> messageListRetvalue = new ArrayList<String>();
+	
 	/***
 	 * @author heiko
 	 * <br> Init the Bean
@@ -26,22 +31,33 @@ public class MessageBean extends MeldungenUtil {
 
 	/**** Getter and Setter *************************/
 	
-	public String getMessageText() {
-		return messageText;
-	}
 	public void setMessageText(String messageText) {
-		this.messageText = messageText;
+		messageList.add(messageText);
 	}
 
 	public String getMessageCSS() {
 		return messageCSS;
 	}
-
 	public void setMessageCSS(String messageCSS) {
 		this.messageCSS = messageCSS;
 	}
 	
 	
+	public List<String> getMessageList() {
+		
+		messageListRetvalue.clear();
+		
+		if(messageList.size()>0){
+			
+			for(String msg : messageList){
+				messageListRetvalue.add(msg);
+			}
+			messageList.clear();
+		}
+		
+		return messageListRetvalue;
+	}
+
 	/*** Helper Methods to set Meldungen text and color ****/
 	
 	public void setLoginStartState(){

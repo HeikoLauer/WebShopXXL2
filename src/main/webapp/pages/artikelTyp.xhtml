@@ -23,20 +23,22 @@
 	   	 			 	   varstatus="status"> 
 					
 					<!--  Begin DIV Artikelgroup  -->
-					<div class="artikel_group" style="text-align: center;">
-						
-						<p:commandLink ajax="false" action="#" actionListener="#{warehouseBean.addNewArtikelTypBean}">			
+					<div class="artikel_group common_center_align" >
+				
+						<p:commandLink ajax="false" action="#" actionListener="#{warehouseBean.addNewArtikelTypBean}">
+							<f:attribute name="artikeltyp_index" value="#{artikelTyp.artikelTypBean}" />			
+ 							
  							<p:graphicImage styleClass="artikel_group_icon" 
 								value="../resources/dummyDaten/CategorieBilder/#{artikelTypCategorie.image}" />
-							<f:attribute name="artikeltyp_index" value="#{artikelTyp.artikelTypBean}" />
+						
 						</p:commandLink>	
 						
-						<div style="text-align: center;">
+						<div class="common_center_align">
 							<p:outputLabel value="#{artikelTypGroup.name}" /></div>
 				
 					</div> <!-- End DIV Artikelgroup  -->
 
-				</ui:repeat> <!--  Begin inner Loop for ArticelTypGroup -->
+				</ui:repeat> <!--  End inner Loop for ArticelTypGroup -->
 					
 			</div> <!-- End Row DIV surround the Artikel Group Row -->	
 			

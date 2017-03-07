@@ -31,6 +31,10 @@
 }
 
 
+.common_center_align{
+	text-align: center;
+}
+
 /** All CSS for the Header Panel **/
 
 .common_headerpanel_main{

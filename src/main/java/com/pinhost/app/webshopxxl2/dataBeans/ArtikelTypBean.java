@@ -16,18 +16,19 @@ public class ArtikelTypBean {
 	private int index;
 	 
 	private long id;
+
+	private long artikelCategorie_id;
 	private long artikelGroup_id;
 	private String name;
 	private String image;
 	private Long value;
 	private Long maxQuantity;
-	private Long quantity;
-	private Long totalValue;
 	private String currency;
 	
 	// This is not a property from the ArtikelTyp in the Database
 	// This is the counter for the warehouse
 	private int artikelCounter = 0;
+	private long totalValue = 0;
 	
 	/**** Getter and Setter   *****************/
 	
@@ -51,6 +52,14 @@ public class ArtikelTypBean {
 	public void setArtikelGroup_id(long artikelGroup_id) {
 		this.artikelGroup_id = artikelGroup_id;
 	}
+	
+	public long getArtikelCategorie_id() {
+		return artikelCategorie_id;
+	}
+	public void setArtikelCategorie_id(long artikelCategorie_id) {
+		this.artikelCategorie_id = artikelCategorie_id;
+	}
+	
 	
 	public String getName() {
 		return name;
@@ -77,17 +86,6 @@ public class ArtikelTypBean {
 		this.maxQuantity = maxQuantity;
 	}
 	
-	public Long getQuantity() {
-		return quantity;
-	}
-	public void setQuantity(Long quantity) {
-		this.quantity = quantity;
-	}
-	
-	public void setTotalValue(Long totalValue) {
-		this.totalValue = totalValue;
-	}
-	
 	public String getCurrency() {
 		return currency;
 	}
@@ -102,6 +100,7 @@ public class ArtikelTypBean {
 	public int getArtikelCounter() {
 		return artikelCounter;
 	}
+	
 	public void setArtikelCounter(int artikelCounter) {
 		this.artikelCounter = artikelCounter;
 	}
@@ -112,10 +111,30 @@ public class ArtikelTypBean {
 	 * @return
 	 */
 	public String getTotalValue(){
-		totalValue = artikelCounter * value;
-		return "" +(totalValue);
+		return "" + totalValue;
 	}
 	
+	public void setTotalValue(long value){
+		totalValue = value;
+	}
+	
+	/***
+	 * @author heiko
+	 * <br> TODO
+	 */
+	public void inCrementValue(){
+		setTotalValue(totalValue + value);
+	}
+	
+	/***
+	 * @author heiko
+	 * <br> TODO
+	 */
+	public void deCrementValue(){
+		setTotalValue(totalValue - value);
+	}
+
+
 	/***
 	 * @author heiko
 	 * <<br> return himself

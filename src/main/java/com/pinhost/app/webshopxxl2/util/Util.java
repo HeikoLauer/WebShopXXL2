@@ -13,7 +13,7 @@ import com.pinhost.app.webshopxxl2.beans.MessageBean;
 import com.pinhost.app.webshopxxl2.beans.NavigationBean;
 import com.pinhost.app.webshopxxl2.beans.SessionBean;
 import com.pinhost.app.webshopxxl2.dataBeans.CostumerBean;
-
+import com.pinhost.app.webshopxxl2.dataBeans.WarehouseBean;
 import javax.el.ExpressionFactory;
 import javax.el.ValueExpression;
 
@@ -42,5 +42,6 @@ public class Util {
 	public static SessionBean getSessionBean() { return (SessionBean) getBean("sessionBean"); }
 	public static CostumerBean getCostumerBean() { return (CostumerBean) getBean("costumerBean"); }
 	public static MessageBean getMessageBean() { return (MessageBean) getBean("messageBean"); }
+	public static WarehouseBean getWarehouseBean() { return (WarehouseBean) getBean("warehouseBean"); }
 
 }

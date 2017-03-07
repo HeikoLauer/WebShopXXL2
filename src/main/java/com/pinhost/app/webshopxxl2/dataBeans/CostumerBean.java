@@ -262,6 +262,31 @@ public class CostumerBean {
 	
 	/*** Action Methoden *******/
 
+	
+	/***
+	 * @author heiko
+	 * <br> decrement the Credit Limit 
+	 * <br> if a ArtikelTyp is add into the Warehouse
+	 * <br> or a Artikel is increment in the Warehouse
+	 * 
+	 * @param artkikelTypValue
+	 */
+	public void decrementCredit(Long artkikelTypValue){
+		creditLimit = creditLimit - artkikelTypValue;
+	}
+	
+	/***
+	 * @author heiko
+	 * <br> increment the Credit Limit 
+	 * <br> if a Artikel is decrement in the Warehouse
+	 * 
+	 * @param artkikelTypValue
+	 */
+	public void incrementCredit(Long artkikelTypValue){
+		creditLimit = creditLimit + artkikelTypValue;
+	}
+	
+
 	/**
 	 * @author heiko
 	 * <br> receive a TO Object 

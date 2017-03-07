@@ -7,12 +7,26 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"	
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:h="http://java.sun.com/jsf/html">
-  			
-	<div style="width: 70%; float: left">
-  		<h:outputText styleClass="common_infopanel_meldung_text" 
-  			style="#{messageBean.messageCSS}"
-  			id="id_infopanel_meldung_text" 
-  			value="#{messageBean.messageText}"/>
-	</div>
+
+  	
+  	<body>	
+  		
+		<div style="width: 70%; float: left">
+			
+			<ui:repeat var="message" 
+	   	  	  		       value="#{messageBean.messageList}" 
+	   	 			 	   varstatus="status">
+					
+				<div style="background:#F3E2A9; margin:2px; padding:2px; border-radius:3px; width:450px;">
+  					<h:outputText styleClass="common_infopanel_meldung_text" 
+  						style="#{messageBean.messageCSS}"
+  			 			value="#{message}"/>
+  				</div>
+	  			
+	  		</ui:repeat>
+	  		<span style="font-size: 1px">&nbsp;</span>
+		</div>
+		
+ 	</body>
  
 </html>
