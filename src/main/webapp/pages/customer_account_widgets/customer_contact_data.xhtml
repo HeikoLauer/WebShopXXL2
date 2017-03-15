@@ -14,7 +14,7 @@
 	<!--  Start Header -->	
 	<div class="co_accountpanel_widgetheader_outline">
 		<div class="co_accountpanel_widgetheader cus_header_background cus_header_foreground">
-		 	<p:outputLabel styleClass="common_label_20B"  value=" " />
+		 	<p:outputLabel styleClass="common_label_20B"  value="Kontaktdaten" />
 		</div>
 	</div> <!-- End Header -->
 	
@@ -23,11 +23,14 @@
 
 		<h:panelGrid columnClasses="co_accountpanel_password_col" 
 			style="margin:10px" >
+				<h:outputLabel style="margin-left:10px;" value="#{costumerBean.filial_Name}"  />
+				<h:outputLabel style="margin-left:10px;" value="#{costumerBean.filial_street}"  />
+				<h:outputLabel style="margin-left:10px;" value="#{costumerBean.filial_postcode} #{costumerBean.filial_place} "  />
 		</h:panelGrid>		
 				
 	</div>
 	<!-- End Content -->
-		
+   			
 	
 </h:body>	
   	
