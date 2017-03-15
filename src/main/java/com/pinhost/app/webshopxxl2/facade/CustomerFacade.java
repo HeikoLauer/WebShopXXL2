@@ -8,6 +8,7 @@
 package com.pinhost.app.webshopxxl2.facade;
 
 
+import com.pinhost.app.webshopxxl2.dataBeans.CostumerBean;
 import com.pinhost.app.webshopxxl2.util.Util;
 import com.pinhost.common.webshopxxl2.dbconnect.DBCustomerConnect;
 import com.pinhost.common.webshopxxl2.to.CostumerTO;
@@ -49,4 +50,12 @@ public class CustomerFacade extends Util {
 		return false;
 	}
 
+	/****
+	 * @author heiko
+	 * <br>
+	 */
+	public static void changePassword(CostumerBean bean){
+		
+		System.out.println("CustomerFacde : 69 : changePassword : " + bean.getLoginName());
+	}
 }

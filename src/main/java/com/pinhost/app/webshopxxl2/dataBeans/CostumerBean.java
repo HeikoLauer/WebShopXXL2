@@ -10,14 +10,23 @@
 
 package com.pinhost.app.webshopxxl2.dataBeans;
 
+import javax.faces.event.ActionEvent;
+
+import com.pinhost.app.webshopxxl2.facade.CustomerFacade;
+import com.pinhost.app.webshopxxl2.util.Util;
 import com.pinhost.common.webshopxxl2.to.CostumerTO;
 
-public class CostumerBean {
+public class CostumerBean extends Util {
 	
 	private long id;
 	
 	private String loginName;
 	private String password;
+
+	private String oldpassword;
+	private String newpassword;
+	private String repeatpassword;
+	
 	
 	private Long creditLimit; 	
 	private Long reachedCreditLimit; 
@@ -72,6 +81,30 @@ public class CostumerBean {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	public String getOldpassword() {
+		return oldpassword;
+	}
+
+	public void setOldpassword(String oldpassword) {
+		this.oldpassword = oldpassword;
+	}
+
+	public String getNewpassword() {
+		return newpassword;
+	}
+
+	public void setNewpassword(String newpassword) {
+		this.newpassword = newpassword;
+	}
+
+	public String getRepeatpassword() {
+		return repeatpassword;
+	}
+
+	public void setRepeatpassword(String repeatpassword) {
+		this.repeatpassword = repeatpassword;
 	}
 
 	public Long getCreditLimit() {
@@ -366,6 +399,21 @@ public class CostumerBean {
 		fi_contact_mail="";
 		fi_contact_position=""; 
 	
+	}
+	
+	
+	/*** Action Methods *******************************/
+	
+	/***
+	 * @author heiko
+	 * 
+	 * <br> Change the Customer Password
+	 */
+	public String changePassword(){
+		
+		getMessageBean().setChangePasswordOk();
+		CustomerFacade.changePassword(this);
+		return "#";
 	}
 	
 }

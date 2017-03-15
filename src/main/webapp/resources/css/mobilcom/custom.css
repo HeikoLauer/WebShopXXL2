@@ -1,0 +1,22 @@
+
+.cus_header_background{
+	background-color: #4e9a06;
+}
+
+.cus_header_foreground{
+	color: yellow;
+}
+
+.cus_label_foreground{
+	color: #4e9a06;
+}
+
+.cus_header_link a{
+	color: yellow;
+	text-decoration: none;
+}
+
+.cus_text_link a{
+	color: #4e9a06;
+	text-decoration: none;
+}

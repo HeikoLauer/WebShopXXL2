@@ -8,56 +8,51 @@
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:h="http://java.sun.com/jsf/html">
  
-    
-    <h:form id="form_loginpage">
-  		
-		<!-- START Loginpanel 2 -->
-		<div class="login_loginpanel_main">
-				
-			<div class="cus_loginpanel_header login_loginpanel_header">
-				<p:outputLabel value="Bitte melden Sie sich an" />
-			</div>
+ 
+ <h:form id="form_login_page">
+		
+	<h:panelGrid styleClass="login_loginpanel_main">
 			
-			<!--  START LOGIN MASK -->		
-			<div class="login_loginpanel_inputpanel">
+		<h:panelGrid styleClass="cus_header_background login_loginpanel_header">
+			<p:outputLabel styleClass="login_loginpanel_header_inner cus_header_foreground" 
+				value="Bitte melden Sie sich an" />
+		</h:panelGrid>
 		
-		    	<div class="login_loginpanel_inputgroup">
-	                              
-	               <p:graphicImage styleClass="login_loginpanel_inputicon" 
-	               		value="/resources/images/common/login_user.png"/>
-	                           
-	        	   <p:inputText id="id_loginpage_loginname_input"
-							onchange="js_common_check_login()"
-							onblur="js_common_check_login()"
-							onkeypress="js_common_check_login()"
-							styleClass="common_color_white"
-							value="#{loginBean.loginName}" size="30" />
-	            </div>
-	                            
-	            <div class="login_loginpanel_inputgroup">
-	             	
-	             	<p:graphicImage styleClass="login_loginpanel_inputicon" 
-	               		value="/resources/images/common/login_password.png"/>
-	               
-					<p:password id="id_loginpage_password_input" 
-							onchange="js_common_check_login()"
-							onkeypress="js_common_check_login()"
-							onblur="js_comon_check_login()"
-							styleClass="common_color_white"
-							value="#{loginBean.password}" size="30" />
-	           	</div>
-				
-				<p:commandButton style="margin: 5px 0px 5px 10px;" 
-					ajax="false"
-					id="id_loginpage_button_login"
-					value="Anmelden" 
-					action="#{loginBean.login}">
-				</p:commandButton>
-					    				
-			</div> <!--  END LOGIN MASK -->
+		<h:panelGrid columns="2">
 		
-		</div> <!-- END MAIN -->
-		
-    </h:form>
+			<p:graphicImage styleClass="login_loginpanel_inputicon" 
+               		value="/resources/images/common/login_user.png"/>
+			
+			<p:inputText id="id_loginpage_loginname_input"
+				onchange="js_common_check_login()"
+				onblur="js_common_check_login()"
+				onkeypress="js_common_check_login()"
+				styleClass="common_color_white"
+				value="#{loginBean.loginName}" size="30" />
 
+		   	<p:graphicImage styleClass="login_loginpanel_inputicon" 
+             		value="/resources/images/common/login_password.png"/>
+		
+			<p:password id="id_loginpage_password_input" 
+				onchange="js_common_check_login()"
+				onkeypress="js_common_check_login()"
+				onblur="js_common_check_login()"
+				styleClass="common_color_white"
+				value="#{loginBean.password}" size="30" />
+		
+		</h:panelGrid>
+		
+		<h:panelGrid  style="margin: auto 10px auto auto;">
+			<h:commandButton style="margin:10px;" 
+				id="id_loginpage_button_login"
+				value="Anmelden" 
+				action="#{loginBean.login}">
+			</h:commandButton>
+		</h:panelGrid>
+	
+	</h:panelGrid>	
+		
+ </h:form>
+
+   
 </html>

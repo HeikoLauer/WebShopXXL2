@@ -31,7 +31,9 @@ public class NavigationBean extends Util
 	private String CONTENT_WAREHOUSE_PAGE = "../pages/warehouse.xhtml";
 	private String CONTENT_COSTUMER_ACCOUNT_PAGE = "../pages/costumer_account.xhtml";
 	
-	private String CONTENT_CUSTOMER_INVALID_PAGE = "../pages/subPages/customer_invalid.xhtml";
+	
+	// Widget Pages for Customer Account 
+	private String CONTENT_CUSTOMER_SETTINGS_PAGE = "../pages/customer_account_widgets/customer_settings_page.xhtml";
 	
 	/***
 	 * @author heiko
@@ -97,8 +99,10 @@ public class NavigationBean extends Util
 		return CONTENT_COSTUMER_ACCOUNT_PAGE;
 	}
 	
-	public String getCONTENT_CUSTOMER_INVALID_PAGE() {
-		return CONTENT_CUSTOMER_INVALID_PAGE;
+	/***  Widget Pages *********************************/
+	
+	public String getCONTENT_CUSTOMER_SETTINGS_PAGE() {
+		return CONTENT_CUSTOMER_SETTINGS_PAGE;
 	}
 	
 	
@@ -112,9 +116,9 @@ public class NavigationBean extends Util
 	public String getMenuBarClass(){
 		
 		if(getSessionBean().isUserIsOnline()){
-			return "display_on";
+			return "menubar_on";
 		} else {
-			return "display_off";
+			return "menubar_off";
 		}
 	}
 

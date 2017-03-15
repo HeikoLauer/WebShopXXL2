@@ -10,26 +10,140 @@
  
     <h:form id="form_costumer_acountpanel">
 	
-		<div style="min-height: 500px; border: 1px gray solid;">					
-	    
-	        <div class="co_accountpanel_widgetmain">
-	        	<ui:include src="/pages/costumer_account_widgets/costumer_account_widet1.xhtml" />
-	        </div>
-	   
+		<!--  Start of a WidgetTable  -->
+		<div class="co_accountpanel_widgetframe">					
+	    		    
+	      	<!-- Start Widget Einstellungen -->
 	    	<div class="co_accountpanel_widgetmain">
-	        	<ui:include src="/pages/costumer_account_widgets/costumer_account_widet1.xhtml" />
-	        </div>
+
+		    	<div class="co_accountpanel_widget_small">
+		    		
+		    		<!--  Start Header -->	
+		    		<div class="co_accountpanel_widgetheader_outline">
+		    			<div class="co_accountpanel_widgetheader cus_header_background cus_header_link">
+		    			 	<h:commandLink action="#"  
+		    			 		actionListener="#{navigationBean.switchContentPage}"
+		    			 		styleClass="common_label_20B" value="Einstellungen" >
+		    			 		<f:attribute name="content_page" value="#{navigationBean.CONTENT_CUSTOMER_SETTINGS_PAGE}" />
+		 					</h:commandLink>	
+		    			</div>
+		    		</div> <!-- End Header -->
+		    		
+		    		<!--  Start Content -->
+		    		<div class="co_accountpanel_widgetcontent_outline">
+		    			<div class="co_accountpanel_widgetcontent">
+		    			 	<div class="co_accountpanel_content_table">
+		    			 		<!-- Begin Row -->
+		    			 		<div class="co_accountpanel_content_row">
+		    			 			<div class="co_accountpanel_content_text cus_text_link">
+					    			 	<h:commandLink styleClass="common_label_20N" 
+					    			 		action="#"  actionListener="#{navigationBean.switchContentPage}"
+					    			 		value="Verwalten Sie Ihre Einstellungen, Ihr Password" >
+					    			 		<f:attribute name="content_page" value="#{navigationBean.CONTENT_CUSTOMER_SETTINGS_PAGE}" />
+					    			 	</h:commandLink>	
+									</div>
+		    			 		</div> <!-- End Row -->	
+		    			 	</div>	
+		    			</div>
+		    		</div><!-- End Content -->
+		   		</div> 
+			</div>
+	   		<!-- Ende Widget Einstellungen -->
+	   
+	      	<!-- Start Widget Transaction -->
+	    	<div class="co_accountpanel_widgetmain">
+
+		    	<div class="co_accountpanel_widget_small">
+		    		
+		    		<!--  Start Header -->	
+		    		<div class="co_accountpanel_widgetheader_outline">
+		    			<div class="co_accountpanel_widgetheader cus_header_background cus_header_foreground">
+		    			 	<p:outputLabel styleClass="common_label_20B" value="Transaktionsübersicht" />
+		    			</div>
+		    		</div> <!-- End Header -->
+		    		
+		    		<!--  Start Content -->
+		    		<div class="co_accountpanel_widgetcontent_outline">
+		    			<div class="co_accountpanel_widgetcontent">
+		    			 	<div class="co_accountpanel_content_table">
+		    			 		<!-- Begin Row -->
+		    			 		<div class="co_accountpanel_content_row">
+		    			 			<div class="co_accountpanel_content_text cus_label_foreground">
+					    			 	<p:outputLabel styleClass="common_label_24N"  
+					    			 		value="Transaktionslisten ansehen, herunterladen und Duplikate drucken" />
+									</div>
+		    			 		</div> <!-- End Row -->	
+		    			 	</div>	
+		    			</div>
+		    		</div><!-- End Content -->
+		   		</div> 
+			</div>
+	   		<!-- Start Widget Transaction -->
 	   
 	 
+	      	<!-- Start Widget Transaction -->
 	    	<div class="co_accountpanel_widgetmain">
-		       	<ui:include src="/pages/costumer_account_widgets/costumer_account_widet1.xhtml" />
-	        </div>
+
+		    	<div class="co_accountpanel_widget_small">
+		    		
+		    		<!--  Start Header -->	
+		    		<div class="co_accountpanel_widgetheader_outline">
+		    			<div class="co_accountpanel_widgetheader cus_header_background cus_header_foreground">
+		    			 	<p:outputLabel styleClass="common_label_20B" value="Transaktionsübersicht" />
+		    			</div>
+		    		</div> <!-- End Header -->
+		    		
+		    		<!--  Start Content -->
+		    		<div class="co_accountpanel_widgetcontent_outline">
+		    			<div class="co_accountpanel_widgetcontent">
+		    			 	<div class="co_accountpanel_content_table">
+		    			 		<!-- Begin Row -->
+		    			 		<div class="co_accountpanel_content_row">
+		    			 			<div class="co_accountpanel_content_text cus_label_foreground">
+					    			 	<p:outputLabel styleClass="common_label_24N"  
+					    			 		value="Transaktionslisten ansehen, herunterladen und Duplikate drucken" />
+									</div>
+		    			 		</div> <!-- End Row -->	
+		    			 	</div>	
+		    			</div>
+		    		</div><!-- End Content -->
+		   		</div> 
+			</div>
+	   		<!-- Start Widget Transaction -->
 	   
+	      	<!-- Start Widget Transaction -->
 	    	<div class="co_accountpanel_widgetmain">
-	        	<ui:include src="/pages/costumer_account_widgets/costumer_account_widet1.xhtml" />
-	        </div>
+
+		    	<div class="co_accountpanel_widget_small">
+		    		
+		    		<!--  Start Header -->	
+		    		<div class="co_accountpanel_widgetheader_outline">
+		    			<div class="co_accountpanel_widgetheader cus_header_background cus_header_foreground">
+		    			 	<p:outputLabel styleClass="common_label_20B" value="Transaktionsübersicht" />
+		    			</div>
+		    		</div> <!-- End Header -->
+		    		
+		    		<!--  Start Content -->
+		    		<div class="co_accountpanel_widgetcontent_outline">
+		    			<div class="co_accountpanel_widgetcontent">
+		    			 	<div class="co_accountpanel_content_table">
+		    			 		<!-- Begin Row -->
+		    			 		<div class="co_accountpanel_content_row">
+		    			 			<div class="co_accountpanel_content_text cus_label_foreground">
+					    			 	<p:outputLabel styleClass="common_label_24N"  
+					    			 		value="Transaktionslisten ansehen, herunterladen und Duplikate drucken" />
+									</div>
+		    			 		</div> <!-- End Row -->	
+		    			 	</div>	
+		    			</div>
+		    		</div><!-- End Content -->
+		   		</div> 
+			
+			</div>
+	   		<!-- Start Widget Transaction -->
 		
 		</div>
+		<!--  End of a WidgetTable  -->
 		
     </h:form>
 		

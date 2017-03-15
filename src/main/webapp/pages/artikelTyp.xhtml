@@ -13,10 +13,10 @@
   			
 		<!--  Begin outer div for ArticelTypKategorie -->
 		<div class="artikel_main">		
-		
+		<h:outputText value="#{artikelListBean.actualArtikelGroupBean.name}" />
 			<!-- Begin outer Div     -->
 			<div class="artikel_categorie">
-				
+						
 				<!--  Begin inner Loop for ArticelTypGroup -->
 				<ui:repeat var="artikelTyp" 
 	   	  	  		       value="#{artikelListBean.artikelTypBean}" 
@@ -29,7 +29,7 @@
 							<f:attribute name="artikeltyp_index" value="#{artikelTyp.artikelTypBean}" />			
  							
  							<p:graphicImage styleClass="artikel_group_icon" 
-								value="../resources/dummyDaten/CategorieBilder/#{artikelTypCategorie.image}" />
+								value="../resources/dummyDaten/CategorieBilder/#{artikelTyp.image}" />
 						
 						</p:commandLink>	
 						

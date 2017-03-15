@@ -19,7 +19,9 @@ public class MeldungenUtil {
 	private static String TEXT_ARTIKELTYP_MAXOVER = "Sie dürfen von diesem Artikel keine weiteren kaufen";
 
 	private static String TEXT_COUSTUMER_CREDIT = "Ihr Guthaben ist zu gering";
-	
+
+	private static String TEXT_CHANGEPASSWORD_OK = "Sie haben ihr Password erfolgreich geändert";
+
 	/*** CSS definition ************************************/
 		
 	private static String CSS_ERROR ="color : red";
@@ -51,6 +53,11 @@ public class MeldungenUtil {
 	public static String getText_CostumCredit() {
 		return TEXT_COUSTUMER_CREDIT;
 	}
+	
+	public static String getText_ChangePasswordOK() {
+		return TEXT_CHANGEPASSWORD_OK;
+	}
+	
 	
 	/**** Getter for CSS  *****************************/
 	

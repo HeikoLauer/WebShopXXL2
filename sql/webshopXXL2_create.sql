@@ -59,8 +59,5 @@ CREATE TABLE app.artikelTyp(
 	name varchar(35),
 	image varchar(35),
 	price_value bigint,
-	quantity bigint,
 	maxquantity bigint,
-	totalValue bigint,
-	totalValue bigint,
-	currency varchar(2));
+	currency varchar(5));

@@ -8,40 +8,38 @@
 	
 	<h:form id="form_menubar">
 	
-		<menu id="id_menu_menubar" class="topnav #{navigationBean.menuBarClass}">
+		<div id="id_menu_menubar" class="#{navigationBean.menuBarClass}">
 	  		
-	  		<li>
-	  			<p:commandLink ajax="false" styleClass="active" value="Produktauswahl" 
-	  				action="#"
-	  				actionListener="#{navigationBean.switchContentPage}" >
-	  				<f:attribute name="content_page" value="#{navigationBean.CONTENT_ARTICELGROUP_PAGE}" />
-	  			</p:commandLink>	
-	  		</li>
-
-			<li>
-	  			<p:commandLink ajax="false" styleClass="active" value="Mein Konto" 
-	  				action="#"
-	  				actionListener="#{navigationBean.switchContentPage}" >
-	  				<f:attribute name="content_page" value="#{navigationBean.CONTENT_COSTUMER_ACCOUNT_PAGE}" />
-	  			</p:commandLink>	
-	  		</li>
-			
+	  		<p:commandLink ajax="false" 
+	  			styleClass="menu menu_label_14B cus_header_foreground"
+	  			value="Produktauswahl" 
+	  			action="#"
+	  			actionListener="#{navigationBean.switchContentPage}" >
+	  			<f:attribute name="content_page" value="#{navigationBean.CONTENT_ARTICELGROUP_PAGE}" />
+	  		</p:commandLink>	
+	  
+			<p:commandLink ajax="false" 
+	  			value="Mein Konto"
+	  			styleClass="menu  menu_label_14B cus_header_foreground" 
+	  			action="#"
+	  			actionListener="#{navigationBean.switchContentPage}" >
+	  			<f:attribute name="content_page" value="#{navigationBean.CONTENT_COSTUMER_ACCOUNT_PAGE}" />
+	  		</p:commandLink>	
+	  		
 			<!--  Logoff Button -->
 			
-			<li class="right">
 				
-				<h:commandLink  action="#{navigationBean.logoff}">
-					<h:graphicImage id="id_headerpage_logoff_img"
-						rendered="#{navigationBean.showLogoff}" 
-						height="30" width="30"
-						style="margin-top: -6px"
-						value="../resources/images/common/logoff.png" />
-				
-				</h:commandLink>	
+			<h:commandLink id="id_menu_menuEnd" 
+				styleClass="menu_end cus_label_foreground" 
+				action="#{navigationBean.logoff}">
+				<h:graphicImage id="id_headerpage_logoff_img"
+					styleClass="menu_logoff_icon"
+					rendered="#{navigationBean.showLogoff}" 
+					value="../resources/images/common/logoff.png" />
+			</h:commandLink>	
 					
-			</li>
-	  		
-		</menu>
+			
+		</div>
 		
 	</h:form>
  

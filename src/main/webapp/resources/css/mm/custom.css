@@ -1,0 +1,40 @@
+
+.cus_header_background{
+	background-color: #5C9CCC;
+}
+
+.cus_header_foreground{
+	color: #FCF8F8;
+}
+
+.cus_label_foreground{
+	color: #5C9CCC;
+}
+
+.cus_header_link a{
+	color: #FCF8F8;
+	text-decoration: none;
+}
+
+.cus_text_link a{
+	color: #5C9CCC;
+	text-decoration: none;
+}
+
+menu.topnav li a {
+    display: block;
+    color: #FCF8F8;
+    text-align: center;
+    margin: 8px;
+    padding: 6px;
+    text-decoration: none;
+}
+
+menu.topnav li a:hover:not(.active) {
+	color: #FCF8F8;
+}
+
+menu.topnav li a.active {
+	color : #FCF8F8;
+}
+

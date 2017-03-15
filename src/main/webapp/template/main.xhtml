@@ -20,20 +20,16 @@
 		<link href="../resources/css/warehouse.css" rel="stylesheet" type="text/css" />
 		<link href="../resources/css/login.css" rel="stylesheet" type="text/css" />
 		
-		<link href="../resources/css/mm.css" rel="stylesheet" type="text/css" />
-		 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="../resources/css/${VAR_CUSTOM_PATHNAME}/custom.css" rel="stylesheet" type="text/css" />
 
-	    <script type="text/javascript" src="../resources/js/common.js?2017021401" />
-		<script type="text/javascript" src="../resources/js/mm.js?2017021401" />
-		
+	    <script type="text/javascript" src="../resources/js/common.js?2017031530" />
+		 
 	</h:head>
 	
 	
-	<h:body onload="js_init()">
+	<h:body onresize="js_init()">
 			
-		<div id="id_header_start" class="common_headerpanel_main cus_headerpanel_main">	
+		<div id="id_header_start" class="common_headerpanel_main cus_header_background">	
 			<ui:include src="../template/header.xhtml" />
 		</div>
 		 

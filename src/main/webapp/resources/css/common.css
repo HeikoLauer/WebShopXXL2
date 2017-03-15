@@ -15,21 +15,30 @@
 .common_color_line_button{background: #C2D7E8;}
 
 
-
 .common_label_12N{
-	color: #555753;
 	font-family: sans-serif;
 	font-size: 12px;
 	font-weight: normal;
 }
 
 .common_label_12B{
-	color: #555753;
 	font-family: sans-serif;
 	font-size: 12px;
 	font-weight: bold;
 }
 
+
+.common_label_20B{
+	font-family: sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.common_label_20N{
+	font-family: sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
 
 .common_center_align{
 	text-align: center;
@@ -38,23 +47,25 @@
 /** All CSS for the Header Panel **/
 
 .common_headerpanel_main{
-	border: 1px #D8D8D8 solid; 
-	height: 70px; 
-	width: 100%;
+	width:100%;
+    border: 1px gray solid;
+    min-height:70px;
+    position:relative;
+    display:inline-block;
 }
 
 .common_headerpanel_icon{
 	float: left;
 	height: 60px;
-	padding: 2px 10px 2px 10px;
+	margin: 1px 5px 10px 10px;
 }
 
 /** All CSS for Info Panel **/
 
 .common_infopanel_main{
-	width: 99%;
+	width: 100%;
 	min-height: 85px;
-	margin: 5px 1px 5px 10px;
+	margin: 0px 1px 5px 10px;
 	position: relative; 
 }
 

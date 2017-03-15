@@ -9,6 +9,7 @@ package com.pinhost.app.webshopxxl2.util;
 
 import javax.faces.context.FacesContext;
 
+import com.pinhost.app.webshopxxl2.beans.ArtikelListBean;
 import com.pinhost.app.webshopxxl2.beans.MessageBean;
 import com.pinhost.app.webshopxxl2.beans.NavigationBean;
 import com.pinhost.app.webshopxxl2.beans.SessionBean;
@@ -43,5 +44,6 @@ public class Util {
 	public static CostumerBean getCostumerBean() { return (CostumerBean) getBean("costumerBean"); }
 	public static MessageBean getMessageBean() { return (MessageBean) getBean("messageBean"); }
 	public static WarehouseBean getWarehouseBean() { return (WarehouseBean) getBean("warehouseBean"); }
+	public static ArtikelListBean getArtikelListBean() { return (ArtikelListBean) getBean("artikelListBean"); }
 
 }

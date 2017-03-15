@@ -1,20 +1,36 @@
 /** All CSS for account Panel **/
 
+.co_accountpanel_widgetframe{
+	min-height: 500px; 
+	width: 98%;
+}
 
 .co_accountpanel_widgetmain {
-   float: left;
+    float: left;
     width: 45%;
     min-width : 450px;
     margin: 10px;
 }
 
-.co_accountpanel_widget{
+.co_accountpanel_widgetbig{
 	display : table;
    	border: 1px #6c6b75 solid;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;	
     width: 98%;
+    height: 250px;
+    border-collapse: unset;
+    
 }
+
+.co_accountpanel_widget_small{
+	display : table;
+   	border: 1px #6c6b75 solid;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;	
+    width: 98%;
+	height: 150px;
+}	
 
 .co_accountpanel_widgetheader_outline{
 	display : table-row;
@@ -22,7 +38,6 @@
 	
 .co_accountpanel_widgetheader{
     display: table-cell;
-    background: gray;
     height: 30px;
     text-align: center;
     border: 1px #6c6b75 solid;
@@ -50,6 +65,16 @@
 	height: 25px;
 }
 
+.co_accountpanel_content_text{
+	display: table-cell;
+	width: 120px;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-weight: lighter;
+}
+
+
 .co_accountpanel_content_label{
 	display: table-cell;
 	width: 120px;
@@ -60,17 +85,34 @@
 	width: 200px;
 }
 
-.co_accountpanel_content_label_font{
-	font-family: sans-serif;
-	font-size: 12px;
-	font-style: italic;
-	color : #2e3436;		
-}	
+.co_accountpanel_password_save{
+	text-align: right; 
+	margin:20px 10px; 20px; 0px;
+}
 
-.co_accountpanel_content_value_font{
+.co_accountpanel_password_col{
+	padding: 5px 10px 5px 10px;
+}
+
+.co_accountpanel_password_row{
+	margin: 10px;
+	padding: 10px;
+}
+
+.co_accountpanel_password_message{
 	font-family: sans-serif;
 	font-size: 12px;
-	font-style: normal;
 	font-weight: normal;
-	color : #2e3436;		
-}	
+	font-style: italic;
+	color:red;
+	margin-left:10px;
+}
+
+.co_accountpanel_password_notice{
+	font-family: sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	font-style: italic;
+	color:blue;
+	margin-left:10px;
+}

@@ -82,6 +82,11 @@ public class ArtikelListBean extends Util {
 	public List<ArtikelTypBean> getArtikelTypBean() {
 		return ArtikelFacade.getAllArtikelTypBean(actualArtikelGroupBean.getId(), actualArtikelGroupBean.getArtikelTypCategorie_id());
 	}
+	
+	public ArtikelTypGroupBean getActualArtikelGroupBean(){
+		return actualArtikelGroupBean;
+	}
+	
 /*************************************************************************************/
 /* Action Methods                                                                    */
 /*************************************************************************************/

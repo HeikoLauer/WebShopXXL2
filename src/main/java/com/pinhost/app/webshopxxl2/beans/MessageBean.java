@@ -81,4 +81,9 @@ public class MessageBean extends MeldungenUtil {
 		setMessageCSS(MeldungenUtil.getCss_Warning());
 	}
 
+	public void setChangePasswordOk(){
+		setMessageText(MeldungenUtil.getText_ChangePasswordOK());
+		setMessageCSS(MeldungenUtil.getCss_Message());
+	}
+
 }
